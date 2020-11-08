@@ -1,6 +1,5 @@
 import React, { useState, onChange } from "react";
 import styled from "styled-components";
-import SearchField from "react-search-field";
 
 const options = [
   { value: "AERO ST 1A - Liscombe", label: "AERO ST 1A - Liscombe" },
@@ -21,17 +20,12 @@ const SelectDiv = styled.div`
 const SelectBar = () => {
   const [query, setQuery] = useState("");
 
-  const updateSearch = (search) => {
-    setQuery(search);
-  };
-
   return (
     <>
-      <SearchField
+      <input
+        type="input"
         placeholder="Search..."
-        onChange={(str) => updateSearch(str)}
-        searchText="This is initial search text"
-        classNames="test-class"
+        onChange={(e) => setQuery(e.target.value)}
       />
       {options.map((obj, index) => (
         <>{obj.value.includes(query) ? <p>{obj.value}</p> : null}</>

@@ -1,0 +1,1 @@
+export const BLUE = "#05aff0"

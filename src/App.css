@@ -1,5 +1,19 @@
+@font-face{
+  font-family: "Farro-Bold";
+  font-style: bold;
+  font-weight: 800;
+  src: local('Farro-Bold'), url('fonts/Farro-Bold.ttf');
+}
+
+@font-face{
+  font-family: "Farro";
+  font-weight: 400;
+  src: local('Farro'), url('fonts/Farro-Regular.ttf');
+}
+
 .App {
   text-align: center;
+  font-family: Farro;
 }
 
 .App-logo {
