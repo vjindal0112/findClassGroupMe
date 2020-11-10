@@ -40,11 +40,12 @@ const CheckmarkBox = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
+  transition: all 300ms;
 `;
 
 
 
-const Modal = ({ noGroupMe, className, classLink }) => {
+const Modal = ({ noGroupMe, className, classLink, setClicked }) => {
   const [check1, setCheck1] = useState(false);
   const [check2, setCheck2] = useState(false);
 
@@ -118,9 +119,13 @@ const Modal = ({ noGroupMe, className, classLink }) => {
       ) : null}
 
       <Button
-        onClick={() => {
+        onClick={(e) => {
+          e.preventDefault();
           if (!check1 || !check2) {
             alert("Please check both boxes");
+          } else {
+            window.open(classLink, "_blank");
+            setClicked(false);
           }
         }}
       >
