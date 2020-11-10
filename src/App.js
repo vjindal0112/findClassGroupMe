@@ -4,7 +4,7 @@ import Modal from "./components/Modal";
 import styled from "styled-components";
 import { BLUE } from "./constants";
 import { Row, Col } from "./components/styles";
-import SelectBar from "./components/SearchBar";
+import SelectBar from "./components/SelectBar";
 import ListItem from "./components/ListItem";
 
 const Heading = styled.div`
@@ -101,7 +101,7 @@ function App() {
         </Flex>
       </OuterFlex>
       {/* <Modal className="Math 215"/> */}
-      {/* <SelectBar/> */}
+      <SelectBar />
       <ListItem className="Math 215" profName="Forman"/>
     </div>
   );
