@@ -43,7 +43,19 @@ const CheckmarkBox = styled.div`
   transition: all 300ms;
 `;
 
+const CloseOut = styled.img`
+  height: 20px;
+  width: 20px;
+  position: absolute;
+  right: 20px;
+  top: 16px;
+  opacity: 0.6;
+  transition: all 300ms;
+  :hover {
+    opacity: 1;
+  }
 
+`
 
 const Modal = ({ noGroupMe, className, classLink, setClicked }) => {
   const [check1, setCheck1] = useState(false);
@@ -51,7 +63,8 @@ const Modal = ({ noGroupMe, className, classLink, setClicked }) => {
 
   return (
     <ModalDiv>
-      <Row>
+      <CloseOut onClick={() => setClicked(false)} src="/x.png" />
+      <Row style={{marginTop: "24px"}}>
         <Col md={1} sm={1} xs={1}>
           <CheckmarkBox
             style={{

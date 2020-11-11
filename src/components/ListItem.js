@@ -11,6 +11,7 @@ const OuterDiv = styled.div`
   margin: 0 auto;
   z-index: 3;
   display: block;
+  transition: all 200ms;
   :hover {
     background-color: #efefef;
   }
