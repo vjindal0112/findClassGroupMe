@@ -7,6 +7,9 @@ import { Row, Col } from "./components/styles";
 import SelectBar from "./components/SelectBar";
 import ListItem from "./components/ListItem";
 import Header from "./components/Header"
+import ReactGA from 'react-ga';
+ReactGA.initialize('G-HJKZ0D60FM');
+ReactGA.pageview(window.location.pathname + window.location.search);
 
 const Heading = styled.div`
   font-size: 60px;
@@ -128,7 +131,7 @@ function App() {
         <br />
         <Flex>
           <BulletPoints bgColor={BLUE}>3</BulletPoints>
-          <BulletText>Be in the GroupMe</BulletText>
+          <BulletText>Chat!</BulletText>
         </Flex>
       </OuterFlex>
       <SelectBar />
