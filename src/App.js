@@ -23,7 +23,7 @@ const Heading = styled.div`
     font-size: 28px;
   }
 
-  @media (max-width: 320px) {
+  @media (max-width: 321px) {
     font-size: 24px;
     margin-left: 10px;
   }
@@ -53,6 +53,7 @@ const BulletPoints = styled.div`
     height: 32px;
     width: 32px;
     margin-left: 10%;
+    line-height: 24px;
   }
   @media (max-width: 280px) {
     height: 24px;
@@ -129,13 +130,8 @@ function App() {
         </Flex>
       </OuterFlex>
       {/* <Modal className="Math 215"/> */}
-<<<<<<< HEAD
-      {/* <SelectBar/> */}
-      <ListItem className="Math 215" profName="Forman" />
-=======
       <SelectBar />
-      <ListItem className="Math 215" profName="Forman"/>
->>>>>>> 663b3c3fd0f5bfba36302214e464bdfe906e2c4f
+      <ListItem className="Math 215" profName="Forman" />
     </div>
   );
 }

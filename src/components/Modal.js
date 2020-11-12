@@ -44,8 +44,6 @@ const CheckmarkBox = styled.div`
   transition: all 300ms;
 `;
 
-<<<<<<< HEAD
-=======
 const CloseOut = styled.img`
   height: 20px;
   width: 20px;
@@ -57,10 +55,8 @@ const CloseOut = styled.img`
   :hover {
     opacity: 1;
   }
+`;
 
-`
-
->>>>>>> 663b3c3fd0f5bfba36302214e464bdfe906e2c4f
 const Modal = ({ noGroupMe, className, classLink, setClicked }) => {
   const [check1, setCheck1] = useState(false);
   const [check2, setCheck2] = useState(false);
@@ -68,7 +64,7 @@ const Modal = ({ noGroupMe, className, classLink, setClicked }) => {
   return (
     <ModalDiv>
       <CloseOut onClick={() => setClicked(false)} src="/x.png" />
-      <Row style={{marginTop: "24px"}}>
+      <Row style={{ marginTop: "24px" }}>
         <Col md={1} sm={1} xs={1}>
           <CheckmarkBox
             style={{
@@ -81,7 +77,7 @@ const Modal = ({ noGroupMe, className, classLink, setClicked }) => {
             <Checkmark src="/checkmark.png" />
           </CheckmarkBox>
         </Col>
-        <Col md={11} sm={11} xs={11}>
+        <Col md={11} sm={11} xs={11} style={{ marginLeft: "12px" }}>
           I am a student at the University of Michigan
         </Col>
       </Row>
@@ -100,7 +96,8 @@ const Modal = ({ noGroupMe, className, classLink, setClicked }) => {
             <Checkmark src="/checkmark.png" />
           </CheckmarkBox>
         </Col>
-        <Col xs={11} sm={11} md={11}>
+        <Col xs={11} sm={11} md={11} style={{ marginLeft: "12px" }}>
+          {" "}
           I am a student in this class, and will be kicked if not
         </Col>
       </Row>
