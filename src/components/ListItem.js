@@ -7,10 +7,11 @@ const OuterDiv = styled.div`
   background-color: #fcfcfc;
   color: #333;
   padding: 20px;
-  max-width: 30em;
+  max-width: 40em;
   margin: 0 auto;
   z-index: 3;
   display: block;
+  transition: all 200ms;
   :hover {
     background-color: #efefef;
   }
@@ -29,7 +30,7 @@ const Overlay = styled.div`
   background-color: rgba(0, 0, 0, 0.2);
 `;
 
-export default function ListItem({ className, profName, classLink }) {
+export default function ListItem({ className, classLink }) {
   const [clicked, setClicked] = useState(false);
 
   return (
@@ -51,7 +52,7 @@ export default function ListItem({ className, profName, classLink }) {
         }}
       >
         <span style={{ fontWeight: "bold" }}>
-          {className} {profName ? ` - ${profName}` : null}
+          {className}
         </span>
       </OuterDiv>
     </>
