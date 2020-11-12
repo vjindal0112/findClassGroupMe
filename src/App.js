@@ -110,7 +110,7 @@ const WaveTop = styled.img`
 function App() {
   return (
     <div class="App">
-      <Heaader />
+      <Header />
       <WaveTop src="/waveTop.svg" />
       <Heading>
         FindMyClass<span style={{ color: BLUE }}>Group.Me</span>
