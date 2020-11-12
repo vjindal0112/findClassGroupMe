@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import styled from "styled-components";
 import { BLUE } from "../constants";
-import { Row, Col } from "./styles"
+import { Row, Col } from "./styles";
 
 const ModalDiv = styled.div`
   border-radius: 8px;
@@ -17,6 +17,7 @@ const ModalDiv = styled.div`
   min-width: 300px;
   @media (max-width: 321px) {
     min-width: 240px;
+    border-radius: 6px;
   }
 `;
 
@@ -42,8 +43,6 @@ const CheckmarkBox = styled.div`
   align-items: center;
   transition: all 300ms;
 `;
-
-
 
 const Modal = ({ noGroupMe, className, classLink, setClicked }) => {
   const [check1, setCheck1] = useState(false);

@@ -20,9 +20,18 @@ const Heading = styled.div`
   }
 
   @media (max-width: 768px) {
-    font-size: 24px;
+    font-size: 28px;
   }
 
+  @media (max-width: 320px) {
+    font-size: 24px;
+    margin-left: 10px;
+  }
+
+  @media (max-width: 281px) {
+    font-size: 24px;
+    margin-left: 10px;
+  }
 `;
 
 const BulletPoints = styled.div`
@@ -31,7 +40,7 @@ const BulletPoints = styled.div`
   border-radius: 50%;
   background-color: ${(props) => props.bgColor};
   font-size: 25px;
-  text-align: center;
+  text-align: left;
   font-weight: 500;
   color: white;
   flex-shrink: 0;
@@ -39,6 +48,18 @@ const BulletPoints = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
+  @media (max-width: 768px) {
+    font-size: 18px;
+    height: 32px;
+    width: 32px;
+    margin-left: 10%;
+  }
+  @media (max-width: 280px) {
+    height: 24px;
+    width: 24px;
+    font-size: 16px;
+    margin-left: 10px;
+  }
 `;
 
 const Flex = styled.div`
@@ -57,6 +78,9 @@ const OuterFlex = styled.div`
   @media (min-width: 550px) {
     padding-left: 50px;
   }
+  @media (min-width: 280px) {
+    padding-left: 0px;
+  }
 `;
 
 const BulletText = styled.div`
@@ -67,6 +91,10 @@ const BulletText = styled.div`
   text-align: left;
   justify-content: center;
   align-items: center;
+  @media (max-width: 768px) {
+    font-size: 18px;
+    margin-left: 22px;
+  }
 `;
 
 const WaveTop = styled.img`
@@ -75,7 +103,7 @@ const WaveTop = styled.img`
   left: 0;
   z-index: -3;
   min-width: 100%;
-`
+`;
 
 function App() {
   return (
@@ -102,7 +130,7 @@ function App() {
       </OuterFlex>
       {/* <Modal className="Math 215"/> */}
       {/* <SelectBar/> */}
-      <ListItem className="Math 215" profName="Forman"/>
+      <ListItem className="Math 215" profName="Forman" />
     </div>
   );
 }
