@@ -44,8 +44,6 @@ const CheckmarkBox = styled.div`
   transition: all 300ms;
 `;
 
-<<<<<<< HEAD
-=======
 const CloseOut = styled.img`
   height: 20px;
   width: 20px;
@@ -60,7 +58,6 @@ const CloseOut = styled.img`
 
 `
 
->>>>>>> 663b3c3fd0f5bfba36302214e464bdfe906e2c4f
 const Modal = ({ noGroupMe, className, classLink, setClicked }) => {
   const [check1, setCheck1] = useState(false);
   const [check2, setCheck2] = useState(false);
