@@ -6,6 +6,7 @@ import { BLUE } from "./constants";
 import { Row, Col } from "./components/styles";
 import SelectBar from "./components/SelectBar";
 import ListItem from "./components/ListItem";
+import Header from "./components/Header"
 
 const Heading = styled.div`
   font-size: 60px;
@@ -109,6 +110,7 @@ const WaveTop = styled.img`
 function App() {
   return (
     <div class="App">
+      <Heaader />
       <WaveTop src="/waveTop.svg" />
       <Heading>
         FindMyClass<span style={{ color: BLUE }}>Group.Me</span>
