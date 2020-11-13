@@ -3,6 +3,14 @@ import styled from "styled-components";
 import ListItem from "./ListItem";
 
 const options = [
+  { name: "AERO ST 1A - Liscombe", link: "https://youtube.com" },
+  { name: "AERO ST 20A - Liscombe", link: "https://youtube.com" },
+  { name: "AERO ST 130A - Jones", link: "https://youtube.com" },
+  { name: "AERO ST 140A - Fowler", link: "https://youtube.com" },
+  { name: "AF AMER 1 - Pierre", link: "https://youtube.com" },
+];
+
+const options2 = [
   {
     name: "CHEM 130",
     link: "https://groupme.com/join_group/61906424/us2Na09e",
@@ -295,11 +303,11 @@ const SelectBar = () => {
       />
       {query != ""
         ? options.map((obj, index) => (
-            <>
+            <div key={index}>
               {obj.name.toLowerCase().includes(query.toLowerCase()) ? (
-                <ListItem className={obj.name} classLink={obj.link} />
+                <ListItem key={index} className={obj.name} classLink={obj.link} />
               ) : null}
-            </>
+            </div>
           ))
         : null}
       <br />

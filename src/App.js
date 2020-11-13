@@ -8,7 +8,12 @@ import SelectBar from "./components/SelectBar";
 import ListItem from "./components/ListItem";
 import Header from "./components/Header";
 import ReactGA from "react-ga";
-ReactGA.initialize("G-HJKZ0D60FM");
+import { initAmplitude } from './amplitude';
+
+initAmplitude();
+
+
+ReactGA.initialize("UA-176116817-5");
 ReactGA.pageview(window.location.pathname + window.location.search);
 
 const Heading = styled.div`

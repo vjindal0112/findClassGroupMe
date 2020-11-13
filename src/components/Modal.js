@@ -2,6 +2,8 @@ import React, { useState } from "react";
 import styled from "styled-components";
 import { BLUE } from "../constants";
 import { Row, Col } from "./styles";
+import ReactGA from "react-ga";
+import amplitude from 'amplitude-js';
 
 const ModalDiv = styled.div`
   border-radius: 8px;
@@ -139,6 +141,15 @@ const Modal = ({ noGroupMe, className, classLink, setClicked }) => {
             alert("Please check both boxes");
           } else {
             window.open(classLink, "_blank");
+            ReactGA.event({
+              category: "Join",
+              action: "Click",
+              label: className,
+            });
+            amplitude.getInstance().logEvent(className, {
+              category: "Join",
+              action: "Click",
+            });
             setClicked(false);
           }
         }}
