@@ -6,9 +6,9 @@ import { BLUE } from "./constants";
 import { Row, Col } from "./components/styles";
 import SelectBar from "./components/SelectBar";
 import ListItem from "./components/ListItem";
-import Header from "./components/Header"
-import ReactGA from 'react-ga';
-ReactGA.initialize('G-HJKZ0D60FM');
+import Header from "./components/Header";
+import ReactGA from "react-ga";
+ReactGA.initialize("G-HJKZ0D60FM");
 ReactGA.pageview(window.location.pathname + window.location.search);
 
 const Heading = styled.div`
@@ -55,6 +55,7 @@ const BulletPoints = styled.div`
     height: 32px;
     width: 32px;
     margin-left: 10%;
+    line-height: 24px;
   }
   @media (max-width: 280px) {
     height: 24px;
