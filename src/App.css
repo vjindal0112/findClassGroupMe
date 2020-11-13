@@ -14,8 +14,12 @@
 .App {
   text-align: center;
   font-family: Farro;
+  position: relative;
+  overflow-x: hidden;
+}
 
-  
+* {
+  box-sizing: border-box;
 }
 
 .App-logo {

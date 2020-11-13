@@ -267,9 +267,20 @@ const options = [
   },
 ];
 
-const Bar = styled.div`
-  top: 46%;
-  position: center;
+const Input = styled.input`
+  border: 1px solid #05aff0;
+  font-size: 16px;
+  padding: 12px;
+  background-color: #fcfcfc;
+  width: 40%;
+  display: flex;
+  margin: 0 auto;
+  :focus {
+    border-radius: 0px;
+  }
+  @media (max-width: 768px) {
+    width: 80%;
+  }
 `;
 
 const SelectBar = () => {
@@ -277,27 +288,21 @@ const SelectBar = () => {
 
   return (
     <>
-      <Bar>
-        <input
-          style={{
-            width: "600px",
-            fontSize: "18px",
-            borderWidth: "2px",
-            borderColor: "#05AFF0",
-            padding: "12px",
-          }}
-          type="input"
-          placeholder="Search..."
-          onChange={(e) => setQuery(e.target.value)}
-        />
-      </Bar>
-      {options.map((obj, index) => (
-        <>
-          {obj.name.toLowerCase().includes(query.toLowerCase()) ? (
-            <ListItem className={obj.name} classLink={obj.link} />
-          ) : null}
-        </>
-      ))}
+      <Input
+        type="input"
+        placeholder="Search..."
+        onChange={(e) => setQuery(e.target.value)}
+      />
+      {query != ""
+        ? options.map((obj, index) => (
+            <>
+              {obj.name.toLowerCase().includes(query.toLowerCase()) ? (
+                <ListItem className={obj.name} classLink={obj.link} />
+              ) : null}
+            </>
+          ))
+        : null}
+      <br />
     </>
   );
 };

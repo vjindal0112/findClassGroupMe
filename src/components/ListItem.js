@@ -3,29 +3,32 @@ import styled from "styled-components";
 import Modal from "./Modal";
 
 const OuterDiv = styled.div`
-  border: 1px solid #ccc;
+  border: 1px solid #ddd;
+  border-top-width: 0;
   background-color: #fcfcfc;
   color: #333;
   padding: 20px;
-  max-width: 40em;
+  width: 40%;
   margin: 0 auto;
   z-index: 3;
   display: block;
   transition: all 200ms;
+  text-align: left;
+  font-size: 16px;
   :hover {
-    background-color: #efefef;
+    background-color: #efefff;
   }
   @media (max-width: 768px) {
-    max-width: 80%;
+    width: 80%;
   }
 `;
 
 const Overlay = styled.div`
-  position: absolute;
-  top: 0;
+  position: fixed;
   left: 0;
-  height: 100vh;
-  width: 100vw;
+  bottom: 0;
+  height: 100%;
+  width: 100%;
   z-index: 1;
   background-color: rgba(0, 0, 0, 0.2);
 `;
@@ -51,9 +54,9 @@ export default function ListItem({ className, classLink }) {
           setClicked((clicked) => !clicked);
         }}
       >
-        <span style={{ fontWeight: "bold" }}>
+        {/* <span style={{ fontWeight: "bold" }}> */}
           {className}
-        </span>
+        {/* </span> */}
       </OuterDiv>
     </>
   );

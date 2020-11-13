@@ -6,30 +6,33 @@ import { BLUE } from "./constants";
 import { Row, Col } from "./components/styles";
 import SelectBar from "./components/SelectBar";
 import ListItem from "./components/ListItem";
+import Header from "./components/Header";
+import ReactGA from "react-ga";
+ReactGA.initialize("G-HJKZ0D60FM");
+ReactGA.pageview(window.location.pathname + window.location.search);
 
 const Heading = styled.div`
   font-size: 60px;
   font-weight: bold;
   color: #333;
-  margin: 20px;
-  margin-top: 12%;
+  padding-top: 12%;
 
-  @media (max-width: 1200px) {
-    font-size: 40px;
-    margin-top: 15%;
+  @media (max-width: 1025px) {
+    font-size: 48px;
+    padding-top: 16%;
   }
 
   @media (max-width: 768px) {
-    font-size: 28px;
+    font-size: 24px;
+    padding-top: 28%;
   }
 
-  @media (max-width: 321px) {
-    font-size: 24px;
+  @media (max-width: 320px) {
     margin-left: 10px;
+    padding-top: 40%;
   }
 
   @media (max-width: 281px) {
-    font-size: 24px;
     margin-left: 10px;
   }
 `;
@@ -40,7 +43,6 @@ const BulletPoints = styled.div`
   border-radius: 50%;
   background-color: ${(props) => props.bgColor};
   font-size: 25px;
-  text-align: left;
   font-weight: 500;
   color: white;
   flex-shrink: 0;
@@ -71,10 +73,10 @@ const Flex = styled.div`
 `;
 
 const OuterFlex = styled.div`
-  max-width: 30em;
+  max-width: 18em;
   display: flex;
   flex-direction: column;
-  margin: 0 auto;
+  margin: 12px auto 24px auto;
   padding: 20px;
   @media (min-width: 550px) {
     padding-left: 50px;
@@ -86,14 +88,14 @@ const OuterFlex = styled.div`
 
 const BulletText = styled.div`
   margin-left: 20px;
-  font-size: 24px;
+  font-size: 16px;
   color: black;
   display: flex;
   text-align: left;
   justify-content: center;
   align-items: center;
   @media (max-width: 768px) {
-    font-size: 18px;
+    font-size: 16px;
     margin-left: 22px;
   }
 `;
@@ -104,11 +106,15 @@ const WaveTop = styled.img`
   left: 0;
   z-index: -3;
   min-width: 100%;
+  @media (max-width: 768px) {
+    width: 150%;
+  }
 `;
 
 function App() {
   return (
     <div class="App">
+      <Header />
       <WaveTop src="/waveTop.svg" />
       <Heading>
         FindMyClass<span style={{ color: BLUE }}>Group.Me</span>
@@ -116,22 +122,20 @@ function App() {
       <OuterFlex>
         <Flex>
           <BulletPoints bgColor={BLUE}>1</BulletPoints>
-          <BulletText>Fill out a 60 second form</BulletText>
+          <BulletText>Search for your class</BulletText>
         </Flex>
         <br />
         <Flex>
           <BulletPoints bgColor={BLUE}>2</BulletPoints>
-          <BulletText>Get your buddies Oct. 18</BulletText>
+          <BulletText>Click on your class</BulletText>
         </Flex>
         <br />
         <Flex>
           <BulletPoints bgColor={BLUE}>3</BulletPoints>
-          <BulletText>Make your group chat!</BulletText>
+          <BulletText>Chat!</BulletText>
         </Flex>
       </OuterFlex>
-      {/* <Modal className="Math 215"/> */}
       <SelectBar />
-      <ListItem className="Math 215" profName="Forman" />
     </div>
   );
 }
