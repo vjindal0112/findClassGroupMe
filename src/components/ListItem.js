@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import styled from "styled-components";
 import Modal from "./Modal";
+import ReactGA from 'react-ga'
 
 const OuterDiv = styled.div`
   border: 1px solid #ddd;
@@ -52,10 +53,15 @@ export default function ListItem({ className, classLink }) {
       <OuterDiv
         onClick={() => {
           setClicked((clicked) => !clicked);
+          ReactGA.event({
+            category: "TestListItem",
+            action: "Click",
+            label: "Testing123",
+          });
         }}
       >
         {/* <span style={{ fontWeight: "bold" }}> */}
-          {className}
+        {className}
         {/* </span> */}
       </OuterDiv>
     </>
