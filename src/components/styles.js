@@ -4,11 +4,15 @@ import { BLUE } from '../constants'
 export const Row = styled.div`
   display: flex;
   flex-direction: row;
+  @media (max-width: 768px) {
+    flex-direction: column;
+  }
 `;
 
 export const Col = styled.div`
   display: flex;
   flex-direction: column;
+  margin: 4px;
   margin-right: 4px;
   margin-left: 4px;
   justify-content: center;

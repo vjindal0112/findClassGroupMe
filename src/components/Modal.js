@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import styled from "styled-components";
 import { BLUE } from "../constants";
-import { Row, Col } from "./styles";
+import { Row, Col, Input } from "./styles";
 import ReactGA from "react-ga";
 import amplitude from "amplitude-js";
 import { useLocation } from "react-router-dom";
@@ -61,9 +61,6 @@ const CloseOut = styled.img`
 `;
 
 const Modal = ({ noGroupMe, className, classLink, setClicked }) => {
-  const [check1, setCheck1] = useState(false);
-  const [check2, setCheck2] = useState(false);
-
   const [email, setEmail] = useState("");
   let url = useLocation();
 
@@ -89,45 +86,6 @@ const Modal = ({ noGroupMe, className, classLink, setClicked }) => {
   return (
     <ModalDiv>
       <CloseOut onClick={() => setClicked(false)} src="/x.png" />
-      <Row style={{ marginTop: "24px" }}>
-        <input value={email} onChange={(e) => setEmail(e.target.value)} />
-        <Col md={1} sm={1} xs={1}>
-          <CheckmarkBox
-            style={{
-              backgroundColor: check1 ? BLUE : "#f5f5f5",
-            }}
-            onClick={() => {
-              setCheck1((check1) => !check1);
-            }}
-          >
-            <Checkmark src="/checkmark.png" />
-          </CheckmarkBox>
-        </Col>
-        <Col md={11} sm={11} xs={11} style={{ marginLeft: "12px" }}>
-          I am a student at the University of Michigan
-        </Col>
-      </Row>
-      <br />
-      <br />
-      <Row>
-        <Col md={1} sm={1} xs={1}>
-          <CheckmarkBox
-            style={{
-              backgroundColor: check2 ? BLUE : "#f5f5f5",
-            }}
-            onClick={() => {
-              setCheck2((check2) => !check2);
-            }}
-          >
-            <Checkmark src="/checkmark.png" />
-          </CheckmarkBox>
-        </Col>
-        <Col xs={11} sm={11} md={11} style={{ marginLeft: "12px" }}>
-          {" "}
-          I am a student in this class, and will be kicked if not
-        </Col>
-      </Row>
-
       <br />
       <br />
       <Row>
@@ -144,8 +102,19 @@ const Modal = ({ noGroupMe, className, classLink, setClicked }) => {
           {className}
         </div>
       </Row>
-
-      <br />
+      <Row style={{ marginTop: "24px" }}>
+        <Col md={1} sm={1} xs={1}>
+          Verify you are a student
+        </Col>
+        <Col md={11} sm={11} xs={11}>
+          <Input
+            style={{ boxShadow: "none", width: "100%" }}
+            placeholder="UMich Email"
+            value={email}
+            onChange={(e) => setEmail(e.target.value)}
+          />
+        </Col>
+      </Row>
       <br />
       {noGroupMe ? (
         <>
@@ -161,24 +130,20 @@ const Modal = ({ noGroupMe, className, classLink, setClicked }) => {
       <Button
         onClick={(e) => {
           e.preventDefault();
-          if (!check1 || !check2) {
-            alert("Please check both boxes");
+          if (pushEmailToSheets()) {
+            window.open(classLink, "_blank");
+            ReactGA.event({
+              category: "Join",
+              action: "Click",
+              label: className,
+            });
+            amplitude.getInstance().logEvent(className, {
+              category: "Join",
+              action: "Click",
+            });
+            setClicked(false);
           } else {
-            if (pushEmailToSheets()) {
-              window.open(classLink, "_blank");
-              ReactGA.event({
-                category: "Join",
-                action: "Click",
-                label: className,
-              });
-              amplitude.getInstance().logEvent(className, {
-                category: "Join",
-                action: "Click",
-              });
-              setClicked(false);
-            } else {
-              alert("The email you have entered is not verified");
-            }
+            alert("The email you have entered is not verified");
           }
         }}
       >
