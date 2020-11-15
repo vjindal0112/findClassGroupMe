@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { BLUE } from '../constants'
 
 export const Row = styled.div`
   display: flex;
@@ -74,3 +75,20 @@ export const Heading = styled.div`
     margin-left: 10px;
   }
 `;
+
+export const Button = styled.a`
+  :hover {
+    box-shadow: 6px 6px 6px rgba(0,0,0, 0.2);
+  }
+  padding: 16px;
+  margin: 24px auto;
+  border: 3px solid ${BLUE};
+  background-color: ${BLUE};
+  color: #fcfcfc;
+  transition: 300ms all;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: bold;
+  box-shadow: 3px 3px 3px rgba(0,0,0, 0.2);
+`
