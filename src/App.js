@@ -9,6 +9,7 @@ import ListItem from "./components/ListItem";
 import Header from "./components/Header";
 import ReactGA from "react-ga";
 import { initAmplitude } from './amplitude';
+import { WaveTop, Heading } from './components/styles'
 
 initAmplitude();
 
@@ -16,31 +17,7 @@ initAmplitude();
 ReactGA.initialize("UA-176116817-5");
 ReactGA.pageview(window.location.pathname + window.location.search);
 
-const Heading = styled.div`
-  font-size: 60px;
-  font-weight: bold;
-  color: #333;
-  padding-top: 12%;
 
-  @media (max-width: 1025px) {
-    font-size: 48px;
-    padding-top: 16%;
-  }
-
-  @media (max-width: 768px) {
-    font-size: 24px;
-    padding-top: 28%;
-  }
-
-  @media (max-width: 320px) {
-    margin-left: 10px;
-    padding-top: 40%;
-  }
-
-  @media (max-width: 281px) {
-    margin-left: 10px;
-  }
-`;
 
 const BulletPoints = styled.div`
   height: 38px;
@@ -105,16 +82,7 @@ const BulletText = styled.div`
   }
 `;
 
-const WaveTop = styled.img`
-  position: absolute;
-  top: 0;
-  left: 0;
-  z-index: -3;
-  min-width: 100%;
-  @media (max-width: 768px) {
-    width: 150%;
-  }
-`;
+
 
 function App() {
   return (

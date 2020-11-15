@@ -1,6 +1,7 @@
 import React, { useState, onChange } from "react";
 import styled from "styled-components";
 import ListItem from "./ListItem";
+import { Input } from './styles'
 
 const options = [
   { name: "AERO ST 1A - Liscombe", link: "https://youtube.com" },
@@ -9,6 +10,32 @@ const options = [
   { name: "AERO ST 140A - Fowler", link: "https://youtube.com" },
   { name: "AF AMER 1 - Pierre", link: "https://youtube.com" },
 ];
+
+const SelectBar = () => {
+  const [query, setQuery] = useState("");
+
+  return (
+    <>
+      <Input
+        type="input"
+        placeholder="Find my class"
+        onChange={(e) => setQuery(e.target.value)}
+      />
+      {query != ""
+        ? options.map((obj, index) => (
+            <div key={index}>
+              {obj.name.toLowerCase().includes(query.toLowerCase()) ? (
+                <ListItem key={index} className={obj.name} classLink={obj.link} />
+              ) : null}
+            </div>
+          ))
+        : null}
+      <br />
+    </>
+  );
+};
+
+export default SelectBar;
 
 const options2 = [
   {
@@ -274,45 +301,3 @@ const options2 = [
     link: "https://groupme.com/join_group/64032749/jSbUCpw7",
   },
 ];
-
-const Input = styled.input`
-  border: 1px solid #05aff0;
-  font-size: 16px;
-  padding: 12px;
-  background-color: #fcfcfc;
-  width: 40%;
-  display: flex;
-  margin: 0 auto;
-  :focus {
-    border-radius: 0px;
-  }
-  @media (max-width: 768px) {
-    width: 80%;
-  }
-`;
-
-const SelectBar = () => {
-  const [query, setQuery] = useState("");
-
-  return (
-    <>
-      <Input
-        type="input"
-        placeholder="Find my class"
-        onChange={(e) => setQuery(e.target.value)}
-      />
-      {query != ""
-        ? options.map((obj, index) => (
-            <div key={index}>
-              {obj.name.toLowerCase().includes(query.toLowerCase()) ? (
-                <ListItem key={index} className={obj.name} classLink={obj.link} />
-              ) : null}
-            </div>
-          ))
-        : null}
-      <br />
-    </>
-  );
-};
-
-export default SelectBar;

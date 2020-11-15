@@ -2,6 +2,7 @@ import React from "react";
 import ReactDOM from "react-dom";
 import "./index.css";
 import App from "./App";
+import Submit from "./pages/Submit"
 import reportWebVitals from "./reportWebVitals";
 import {
   Route,
@@ -16,7 +17,7 @@ const routing = (
   <Router>
     <Switch>
       <Route exact path="/" component={App} />
-
+      <Route path="/submit" component={Submit} />
     </Switch>
   </Router>
 );
