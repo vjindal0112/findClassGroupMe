@@ -118,7 +118,7 @@ const WaveTop = styled.img`
 
 function App() {
   return (
-    <div class="App">
+    <div className="App">
       <Header />
       <WaveTop src="/waveTop.svg" />
       <Heading>

@@ -298,7 +298,7 @@ const SelectBar = () => {
     <>
       <Input
         type="input"
-        placeholder="Search..."
+        placeholder="Find my class"
         onChange={(e) => setQuery(e.target.value)}
       />
       {query != ""

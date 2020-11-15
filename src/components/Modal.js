@@ -3,7 +3,8 @@ import styled from "styled-components";
 import { BLUE } from "../constants";
 import { Row, Col } from "./styles";
 import ReactGA from "react-ga";
-import amplitude from 'amplitude-js';
+import amplitude from "amplitude-js";
+import { useLocation } from "react-router-dom";
 
 const ModalDiv = styled.div`
   border-radius: 8px;
@@ -63,10 +64,33 @@ const Modal = ({ noGroupMe, className, classLink, setClicked }) => {
   const [check1, setCheck1] = useState(false);
   const [check2, setCheck2] = useState(false);
 
+  const [email, setEmail] = useState("");
+  let url = useLocation();
+
+  function pushEmailToSheets() {
+    var formData = new FormData();
+
+    if (!email.toLowerCase().includes("@umich.edu")) {
+      return false;
+    } else {
+      formData.append("email", email.toLowerCase().trim());
+      if (url.search != "") {
+        formData.append("ref", url.search.substr(5));
+      }
+    }
+    console.log(formData);
+    fetch(
+      "https://script.google.com/macros/s/AKfycbyNkoQg5Hr-dcJM4hOloxV_ilPCLrm02vKclEQrO96DJWPC3XIA/exec",
+      { method: "POST", body: formData }
+    );
+    return true;
+  }
+
   return (
     <ModalDiv>
       <CloseOut onClick={() => setClicked(false)} src="/x.png" />
       <Row style={{ marginTop: "24px" }}>
+        <input value={email} onChange={(e) => setEmail(e.target.value)} />
         <Col md={1} sm={1} xs={1}>
           <CheckmarkBox
             style={{
@@ -140,17 +164,21 @@ const Modal = ({ noGroupMe, className, classLink, setClicked }) => {
           if (!check1 || !check2) {
             alert("Please check both boxes");
           } else {
-            window.open(classLink, "_blank");
-            ReactGA.event({
-              category: "Join",
-              action: "Click",
-              label: className,
-            });
-            amplitude.getInstance().logEvent(className, {
-              category: "Join",
-              action: "Click",
-            });
-            setClicked(false);
+            if (pushEmailToSheets()) {
+              window.open(classLink, "_blank");
+              ReactGA.event({
+                category: "Join",
+                action: "Click",
+                label: className,
+              });
+              amplitude.getInstance().logEvent(className, {
+                category: "Join",
+                action: "Click",
+              });
+              setClicked(false);
+            } else {
+              alert("The email you have entered is not verified");
+            }
           }
         }}
       >

@@ -3,13 +3,20 @@ import ReactDOM from "react-dom";
 import "./index.css";
 import App from "./App";
 import reportWebVitals from "./reportWebVitals";
-import { Route, BrowserRouter as Router, Switch } from "react-router-dom";
-import ReactGA from 'react-ga';
+import {
+  Route,
+  BrowserRouter as Router,
+  Switch,
+  useParams,
+} from "react-router-dom";
+import ReactGA from "react-ga";
+
 
 const routing = (
   <Router>
     <Switch>
       <Route exact path="/" component={App} />
+
     </Switch>
   </Router>
 );
@@ -23,7 +30,7 @@ function sendToAnalytics({ id, name, value }) {
   ReactGA.event({
     category: "Web Vitals",
     action: name,
-    value: Math.round(name === 'CLS' ? value * 1000 : value),
+    value: Math.round(name === "CLS" ? value * 1000 : value),
     label: id,
     nonInteraction: true,
   });
