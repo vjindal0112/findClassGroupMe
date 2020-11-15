@@ -127,7 +127,7 @@ function App() {
           history.push("/submit");
         }}
       >
-        Add to the Site
+        Add a GroupMe
       </Button2>
     </div>
   );
