@@ -8,16 +8,13 @@ import SelectBar from "./components/SelectBar";
 import ListItem from "./components/ListItem";
 import Header from "./components/Header";
 import ReactGA from "react-ga";
-import { initAmplitude } from './amplitude';
-import { WaveTop, Heading } from './components/styles'
+import { initAmplitude } from "./amplitude";
+import { WaveTop, Heading, Button } from "./components/styles";
+import { useHistory } from "react-router-dom";
 
 initAmplitude();
-
-
 ReactGA.initialize("UA-176116817-5");
 ReactGA.pageview(window.location.pathname + window.location.search);
-
-
 
 const BulletPoints = styled.div`
   height: 38px;
@@ -82,9 +79,23 @@ const BulletText = styled.div`
   }
 `;
 
-
+const Button2 = styled.a`
+  :hover {
+    color: #fcfcfc;
+    background-color: ${BLUE};
+  }
+  padding: 16px;
+  margin: 24px auto;
+  border: 3px solid ${BLUE};
+  transition: 300ms all;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+`;
 
 function App() {
+  let history = useHistory();
+
   return (
     <div className="App">
       <Header />
@@ -95,7 +106,9 @@ function App() {
       <OuterFlex>
         <Flex>
           <BulletPoints bgColor={BLUE}>1</BulletPoints>
-          <BulletText>Search for your class</BulletText>
+          <BulletText>
+            <span style={{ fontWeight: "bold" }}>Type</span>&nbsp;to search
+          </BulletText>
         </Flex>
         <br />
         <Flex>
@@ -105,10 +118,17 @@ function App() {
         <br />
         <Flex>
           <BulletPoints bgColor={BLUE}>3</BulletPoints>
-          <BulletText>Chat!</BulletText>
+          <BulletText>Chat in your GroupMe</BulletText>
         </Flex>
       </OuterFlex>
       <SelectBar />
+      <Button2
+        onClick={() => {
+          history.push("/submit");
+        }}
+      >
+        Add to the Site
+      </Button2>
     </div>
   );
 }

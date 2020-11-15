@@ -35,13 +35,15 @@ export const WaveTop = styled.img`
 `;
 
 export const Input = styled.input`
-  border: 1px solid #05aff0;
+  border: 2px solid #05aff0;
   font-size: 16px;
   padding: 12px;
   background-color: #fcfcfc;
   width: 40%;
   display: flex;
   margin: 0 auto;
+  box-shadow: 3px 3px 3px rgba(0,0,0, 0.2);
+  outline: none;
   :focus {
     border-radius: 0px;
   }
