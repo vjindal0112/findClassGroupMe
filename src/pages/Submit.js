@@ -56,12 +56,6 @@ export default function Submit() {
       </Heading>
       <br />
       <br />
-      <Label>Verify you are a student</Label>
-      <Input
-        placeholder="UMich Email"
-        onChange={(e) => setEmail(e.target.value)}
-      />
-      <br />
       <Label>GroupMe link</Label>
       <Input
         placeholder="GroupMe Link"
@@ -72,6 +66,12 @@ export default function Submit() {
       <Input
         placeholder="Class Name"
         onChange={(e) => setClassName(e.target.value)}
+      />
+      <br/>
+      <Label>Verify you are a student</Label>
+      <Input
+        placeholder="UMich Email"
+        onChange={(e) => setEmail(e.target.value)}
       />
       <Button
         onClick={() => {
