@@ -183,7 +183,7 @@ const options = [
     NoGroupMe: false,
   },
   {
-    name: "〽ich Engineering '24",
+    name: "Mich Engineering '24",
     link: "https://groupme.com/join_group/57527148/a9Y1nlCB",
     NoGroupMe: false,
   },
@@ -270,6 +270,31 @@ const options = [
   {
     name: "MATH 417 - Ho",
     link: "https://groupme.com/join_group/61932317/W7v6mn1R",
+    NoGroupMe: false,
+  },
+  {
+    name: "MATH 216",
+    link: "https://groupme.com/join_group/61936047/z6akPGi1",
+    NoGroupMe: false,
+  },
+  {
+    name: "BA 200 SECTION 12",
+    link: "https://groupme.com/join_group/59157417/qgsesrbs",
+    NoGroupMe: false,
+  },
+  {
+    name: "EECS 482",
+    link: "https://groupme.com/join_group/59615294/65ghtas4",
+    NoGroupMe: false,
+  },
+  {
+    name: "EECS 388",
+    link: "https://groupme.com/join_group/61947729/yaf9o6p2",
+    NoGroupMe: false,
+  },
+  {
+    name: "EECS 445",
+    link: "https://groupme.com/join_group/61973898/0qdngzoi",
     NoGroupMe: false,
   },
 ];
