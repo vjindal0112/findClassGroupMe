@@ -4,6 +4,7 @@ import { WaveTop, Input, Heading, Button } from "../components/styles";
 import { BLUE } from "../constants";
 import styled from "styled-components";
 import { useHistory } from "react-router-dom";
+import Header from '../components/Header';
 
 const Label = styled.div`
   font-weight: bold;
@@ -50,6 +51,7 @@ export default function Submit() {
 
   return (
     <div className="App">
+      <Header title="Submit"/>
       <WaveTop src="/waveTop.svg" />
       <Heading>
         Submit a <span style={{ color: BLUE }}>GroupMe</span> Link
@@ -67,7 +69,7 @@ export default function Submit() {
         placeholder="Class Name"
         onChange={(e) => setClassName(e.target.value)}
       />
-      <br/>
+      <br />
       <Label>Verify you are a student</Label>
       <Input
         placeholder="UMich Email"

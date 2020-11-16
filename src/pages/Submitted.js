@@ -3,7 +3,8 @@ import "../App.css";
 import { WaveTop, Input, Heading, Button } from "../components/styles";
 import { BLUE } from "../constants";
 import styled from "styled-components";
-import { useHistory } from 'react-router-dom';
+import { useHistory } from "react-router-dom";
+import Header from '../components/Header';
 
 const Label = styled.div`
   margin-bottom: 8px;
@@ -21,20 +22,23 @@ const Label = styled.div`
 `;
 
 export default function Submitted() {
-
   let history = useHistory();
 
   return (
     <div className="App">
+      <Header title="Thanks"/>
       <WaveTop src="/waveTop.svg" />
-      <Heading>
-        Thanks for submitting
-      </Heading>
+      <Heading>Thanks for submitting</Heading>
       <br />
-      <Label>The GroupMe link will help people find others to talk to. It should be on the site within an hour!</Label>
-      <Button onClick={() => {
-        history.push("/");
-      }}>
+      <Label>
+        The GroupMe link will help people find others to talk to. It should be
+        on the site within an hour!
+      </Label>
+      <Button
+        onClick={() => {
+          history.push("/");
+        }}
+      >
         Find more chats
       </Button>
     </div>

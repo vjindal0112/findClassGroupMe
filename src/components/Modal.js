@@ -62,15 +62,39 @@ const CloseOut = styled.img`
 
 const Modal = ({ noGroupMe, className, classLink, setClicked }) => {
   const [email, setEmail] = useState("");
+  const spamWords = ["a","test","spam", "shit", "fuck", "bitch", "cock", "cunt", "dick", "faggot", "ass", "titty", "titties"];
+  const specialChars = ["!", "*", "&", "^", "$", "#"]
   let url = useLocation();
 
   function pushEmailToSheets() {
     var formData = new FormData();
 
-    if (!email.toLowerCase().includes("@umich.edu")) {
+    let tempEmail = email.trim();
+    let before = tempEmail.substr(0, tempEmail.indexOf("@"));
+    console.log(before);
+
+    let spam = false;
+    spamWords.map((word, index) => {
+      if (before == word) {
+        spam = true;
+      }
+    })
+
+    specialChars.map((char,index) => {
+      if(tempEmail.includes(char)) {
+        spam = true;
+      }
+    })
+    
+    console.log(tempEmail.split('@'));
+    if ((tempEmail.split('@').length - 1) > 1) {
+      spam = true;
+    }
+
+    if (!(tempEmail.toLowerCase().slice(tempEmail.length - 10) == "@umich.edu") || before.includes(" ") || spam || before.length <= 1) {
       return false;
     } else {
-      formData.append("email", email.toLowerCase().trim());
+      formData.append("email", tempEmail.toLowerCase().trim());
       formData.append("className", className);
       if (url.search != "") {
         formData.append("ref", url.search.substr(5));
