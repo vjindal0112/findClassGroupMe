@@ -71,6 +71,7 @@ const Modal = ({ noGroupMe, className, classLink, setClicked }) => {
       return false;
     } else {
       formData.append("email", email.toLowerCase().trim());
+      formData.append("className", className);
       if (url.search != "") {
         formData.append("ref", url.search.substr(5));
       }
