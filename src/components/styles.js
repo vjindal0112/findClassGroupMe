@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { BLUE } from '../constants'
+import { BLUE } from "../constants";
 
 export const Row = styled.div`
   display: flex;
@@ -49,13 +49,14 @@ export const Input = styled.input`
   width: 40%;
   display: flex;
   margin: 0 auto;
-  box-shadow: 3px 3px 3px rgba(0,0,0, 0.2);
+  box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.2);
   outline: none;
   :focus {
     border-radius: 0px;
   }
   @media (max-width: 768px) {
     width: 80%;
+    padding: 12px;
   }
 `;
 
@@ -88,7 +89,7 @@ export const Heading = styled.div`
 
 export const Button = styled.a`
   :hover {
-    box-shadow: 6px 6px 6px rgba(0,0,0, 0.2);
+    box-shadow: 6px 6px 6px rgba(0, 0, 0, 0.2);
   }
   padding: 16px;
   margin: 24px auto;
@@ -100,5 +101,5 @@ export const Button = styled.a`
   justify-content: center;
   align-items: center;
   font-weight: bold;
-  box-shadow: 3px 3px 3px rgba(0,0,0, 0.2);
-`
+  box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.2);
+`;

@@ -67,7 +67,7 @@ export default function Submit() {
         placeholder="Class Name"
         onChange={(e) => setClassName(e.target.value)}
       />
-      <br/>
+      <br />
       <Label>Verify you are a student</Label>
       <Input
         placeholder="UMich Email"

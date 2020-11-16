@@ -21,7 +21,7 @@ const BulletPoints = styled.div`
   width: 38px;
   border-radius: 50%;
   background-color: ${(props) => props.bgColor};
-  font-size: 25px;
+  font-size: 22px;
   font-weight: 500;
   color: white;
   flex-shrink: 0;
@@ -99,8 +99,7 @@ const LabelMini = styled.div`
   display: inline-flex;
   margin: 4px auto;
   margin-top: 12px;
-
-`
+`;
 
 function App() {
   let history = useHistory();
@@ -131,7 +130,8 @@ function App() {
         </Flex>
       </OuterFlex>
       <SelectBar />
-      <LabelMini>Don't see what you're looking for?</LabelMini><br/>
+      <LabelMini>Don't see what you're looking for?</LabelMini>
+      <br />
       <Button2
         onClick={() => {
           history.push("/submit");
