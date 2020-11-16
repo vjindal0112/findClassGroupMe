@@ -42,7 +42,7 @@ export const Input = styled.input`
   border: 2px solid #05aff0;
   font-size: 16px;
   padding: 12px;
-  background-color: #fcfcfc;
+  background-color: #fff;
   width: 40%;
   display: flex;
   margin: 0 auto;
@@ -92,7 +92,7 @@ export const Button = styled.a`
   margin: 24px auto;
   border: 3px solid ${BLUE};
   background-color: ${BLUE};
-  color: #fcfcfc;
+  color: #fff;
   transition: 300ms all;
   display: inline-flex;
   justify-content: center;
