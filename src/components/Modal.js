@@ -104,7 +104,6 @@ const Modal = ({ noGroupMe, className, classLink, setClicked }) => {
 
     let tempEmail = email.trim();
     let before = tempEmail.substr(0, tempEmail.indexOf("@"));
-    console.log(before);
 
     let spam = false;
     spamWords.map((word, index) => {
@@ -119,7 +118,6 @@ const Modal = ({ noGroupMe, className, classLink, setClicked }) => {
       }
     });
 
-    console.log(tempEmail.split("@"));
     if (tempEmail.split("@").length - 1 > 1) {
       spam = true;
     }
@@ -138,7 +136,6 @@ const Modal = ({ noGroupMe, className, classLink, setClicked }) => {
         formData.append("ref", url.search.substr(5));
       }
     }
-    console.log(formData);
     fetch(
       "https://script.google.com/macros/s/AKfycbyNkoQg5Hr-dcJM4hOloxV_ilPCLrm02vKclEQrO96DJWPC3XIA/exec",
       { method: "POST", body: formData }

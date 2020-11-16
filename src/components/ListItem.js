@@ -66,9 +66,7 @@ export default function ListItem({ className, classLink, noGroupMe }) {
           });
         }}
       >
-        {/* <span style={{ fontWeight: "bold" }}> */}
         {className}
-        {/* </span> */}
       </OuterDiv>
     </>
   );
