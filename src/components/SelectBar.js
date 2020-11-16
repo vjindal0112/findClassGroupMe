@@ -344,8 +344,8 @@ const options = [
   },
   {
     name: "MATH 216",
-    link: "https://groupme.com/join_group/64032672/RkStd8Ic",
-    NoGroupMe: true,
+    link: "https://groupme.com/join_group/61936047/z6akPGi1",
+    NoGroupMe: false,
   },
   {
     name: "PHYSICS 140",

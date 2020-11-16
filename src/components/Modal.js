@@ -102,7 +102,7 @@ const Modal = ({ noGroupMe, className, classLink, setClicked }) => {
           {className}
         </div>
       </Row>
-      <Row style={{ marginTop: "24px" }}>
+      <Row style={{ marginTop: "12px" }}>
         <Col md={1} sm={1} xs={1}>
           Verify you are a student
         </Col>

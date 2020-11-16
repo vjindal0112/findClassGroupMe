@@ -36,6 +36,9 @@ export const WaveTop = styled.img`
   @media (max-width: 768px) {
     width: 150%;
   }
+  @media (max-width: 320px) {
+    width: 200%;
+  }
 `;
 
 export const Input = styled.input`
@@ -68,12 +71,13 @@ export const Heading = styled.div`
   }
 
   @media (max-width: 768px) {
-    font-size: 24px;
+    font-size: 28px;
     padding-top: 28%;
   }
 
   @media (max-width: 320px) {
     margin-left: 10px;
+    font-size: 24px;
     padding-top: 40%;
   }
 

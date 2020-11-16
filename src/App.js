@@ -86,12 +86,21 @@ const Button2 = styled.a`
   }
   padding: 16px;
   margin: 24px auto;
+  margin-top: 12px;
   border: 3px solid ${BLUE};
   transition: 300ms all;
   display: inline-flex;
   justify-content: center;
   align-items: center;
 `;
+
+const LabelMini = styled.div`
+  font-size: 12px;
+  display: inline-flex;
+  margin: 4px auto;
+  margin-top: 12px;
+
+`
 
 function App() {
   let history = useHistory();
@@ -122,6 +131,7 @@ function App() {
         </Flex>
       </OuterFlex>
       <SelectBar />
+      <LabelMini>Don't see what you're looking for?</LabelMini><br/>
       <Button2
         onClick={() => {
           history.push("/submit");
