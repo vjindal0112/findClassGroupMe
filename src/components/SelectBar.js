@@ -2,6 +2,8 @@ import React, { useState, onChange } from "react";
 import styled from "styled-components";
 import ListItem from "./ListItem";
 import { Input } from "./styles";
+import ReactGA from "react-ga";
+import amplitude from "amplitude-js";
 
 const options1 = [
   { name: "AERO ST 1A - Liscombe", link: "https://youtube.com" },
@@ -20,6 +22,15 @@ const SelectBar = () => {
         type="input"
         placeholder="Find my class"
         onChange={(e) => setQuery(e.target.value)}
+        onClick={() => {
+          ReactGA.event({
+            category: "Search",
+            action: "Click",
+          });
+          amplitude.getInstance().logEvent("Search", {
+            action: "Click",
+          });
+        }}
       />
       {query != ""
         ? options
@@ -183,7 +194,7 @@ const options = [
     NoGroupMe: false,
   },
   {
-    name: "〽ich Engineering '24",
+    name: "Mich Engineering '24",
     link: "https://groupme.com/join_group/57527148/a9Y1nlCB",
     NoGroupMe: false,
   },
@@ -273,113 +284,28 @@ const options = [
     NoGroupMe: false,
   },
   {
-    name: "ANTHRCUL 101",
-    link: "https://groupme.com/join_group/64031843/0q1cC50n",
-    NoGroupMe: true,
-  },
-  {
-    name: "BA 100",
-    link: "https://groupme.com/join_group/64031875/rXdkRKG8",
-    NoGroupMe: true,
-  },
-  {
-    name: "BIOLCHEM 212",
-    link: "https://groupme.com/join_group/64031927/eJbhU6bj",
-    NoGroupMe: true,
-  },
-  {
-    name: "BIOLOGY 171",
-    link: "https://groupme.com/join_group/64031954/IyOWD3B9",
-    NoGroupMe: true,
-  },
-  {
-    name: "BIOLOGY 172",
-    link: "https://groupme.com/join_group/64032026/R3Mh4e6F",
-    NoGroupMe: true,
-  },
-  {
-    name: "COMM 101",
-    link: "https://groupme.com/join_group/64032035/jH9OwlWD",
-    NoGroupMe: true,
-  },
-  {
-    name: "COMM 102",
-    link: "https://groupme.com/join_group/64032055/agDLFDD3",
-    NoGroupMe: true,
-  },
-  {
-    name: "COMPLIT 141",
-    link: "https://groupme.com/join_group/64032066/NOkUwRZQ",
-    NoGroupMe: true,
-  },
-  {
-    name: "EECS 203",
-    link: "https://groupme.com/join_group/64032082/M16xtuX8",
-    NoGroupMe: true,
-  },
-  {
-    name: "ENGLISH 124",
-    link: "https://groupme.com/join_group/64032299/syjX3Trj",
-    NoGroupMe: true,
-  },
-  {
-    name: "INTLSTD 101",
-    link: "https://groupme.com/join_group/64032339/Ll3F6FVc",
-    NoGroupMe: true,
-  },
-  {
-    name: "MATH 105",
-    link: "https://groupme.com/join_group/64032634/JhVXhAMM",
-    NoGroupMe: true,
-  },
-  {
-    name: "MATH 156",
-    link: "https://groupme.com/join_group/64032649/uCu2weiJ",
-    NoGroupMe: true,
-  },
-  {
-    name: "MATH 214",
-    link: "https://groupme.com/join_group/64032662/29R9zVPu",
-    NoGroupMe: true,
-  },
-  {
     name: "MATH 216",
     link: "https://groupme.com/join_group/61936047/z6akPGi1",
     NoGroupMe: false,
   },
   {
-    name: "PHYSICS 140",
-    link: "https://groupme.com/join_group/64032691/3zUYBgwz",
-    NoGroupMe: true,
+    name: "BA 200 SECTION 12",
+    link: "https://groupme.com/join_group/59157417/qgsesrbs",
+    NoGroupMe: false,
   },
   {
-    name: "PHYSICS 240",
-    link: "https://groupme.com/join_group/64032700/K93HYuJD",
-    NoGroupMe: true,
+    name: "EECS 482",
+    link: "https://groupme.com/join_group/59615294/65ghtas4",
+    NoGroupMe: false,
   },
   {
-    name: "POLSCI 140",
-    link: "https://groupme.com/join_group/64032712/cvC11pn1",
-    NoGroupMe: true,
+    name: "EECS 388",
+    link: "https://groupme.com/join_group/61947729/yaf9o6p2",
+    NoGroupMe: false,
   },
   {
-    name: "POLSCI 160",
-    link: "https://groupme.com/join_group/64032723/JvVMKkzL",
-    NoGroupMe: true,
-  },
-  {
-    name: "SOC 100",
-    link: "https://groupme.com/join_group/64032734/lEPWGlQF",
-    NoGroupMe: true,
-  },
-  {
-    name: "SPANISH 103",
-    link: "https://groupme.com/join_group/64032739/SVprZqkI",
-    NoGroupMe: true,
-  },
-  {
-    name: "SPANISH 232",
-    link: "https://groupme.com/join_group/64032749/jSbUCpw7",
-    NoGroupMe: true,
+    name: "EECS 445",
+    link: "https://groupme.com/join_group/61973898/0qdngzoi",
+    NoGroupMe: false,
   },
 ];

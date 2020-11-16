@@ -60,10 +60,43 @@ const CloseOut = styled.img`
   }
 `;
 
+const DInput = styled.input`
+  border: 2px solid #05aff0;
+  font-size: 16px;
+  padding: 8px 12px;
+  background-color: #fcfcfc;
+  width: 40%;
+  display: flex;
+  margin: 0 auto;
+  box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.2);
+  outline: none;
+  :focus {
+    border-radius: 0px;
+  }
+  @media (max-width: 768px) {
+    width: 80%;
+    padding: 12px;
+  }
+`;
+
 const Modal = ({ noGroupMe, className, classLink, setClicked }) => {
   const [email, setEmail] = useState("");
-  const spamWords = ["a","test","spam", "shit", "fuck", "bitch", "cock", "cunt", "dick", "faggot", "ass", "titty", "titties"];
-  const specialChars = ["!", "*", "&", "^", "$", "#"]
+  const spamWords = [
+    "a",
+    "test",
+    "spam",
+    "shit",
+    "fuck",
+    "bitch",
+    "cock",
+    "cunt",
+    "dick",
+    "faggot",
+    "ass",
+    "titty",
+    "titties",
+  ];
+  const specialChars = ["!", "*", "&", "^", "$", "#"];
   let url = useLocation();
 
   function pushEmailToSheets() {
@@ -78,20 +111,25 @@ const Modal = ({ noGroupMe, className, classLink, setClicked }) => {
       if (before == word) {
         spam = true;
       }
-    })
+    });
 
-    specialChars.map((char,index) => {
-      if(tempEmail.includes(char)) {
+    specialChars.map((char, index) => {
+      if (tempEmail.includes(char)) {
         spam = true;
       }
-    })
-    
-    console.log(tempEmail.split('@'));
-    if ((tempEmail.split('@').length - 1) > 1) {
+    });
+
+    console.log(tempEmail.split("@"));
+    if (tempEmail.split("@").length - 1 > 1) {
       spam = true;
     }
 
-    if (!(tempEmail.toLowerCase().slice(tempEmail.length - 10) == "@umich.edu") || before.includes(" ") || spam || before.length <= 1) {
+    if (
+      !(tempEmail.toLowerCase().slice(tempEmail.length - 10) == "@umich.edu") ||
+      before.includes(" ") ||
+      spam ||
+      before.length <= 1
+    ) {
       return false;
     } else {
       formData.append("email", tempEmail.toLowerCase().trim());
@@ -128,11 +166,16 @@ const Modal = ({ noGroupMe, className, classLink, setClicked }) => {
         </div>
       </Row>
       <Row style={{ marginTop: "12px" }}>
-        <Col md={1} sm={1} xs={1}>
+        <Col
+          md={1}
+          sm={1}
+          xs={1}
+          style={{ alignItems: "center", justifyContent: "center" }}
+        >
           Verify you are a student
         </Col>
-        <Col md={11} sm={11} xs={11}>
-          <Input
+        <Col md={11} sm={11} xs={11} style={{ marginTop: "10px" }}>
+          <DInput
             style={{ boxShadow: "none", width: "100%" }}
             placeholder="UMich Email"
             value={email}
