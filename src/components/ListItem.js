@@ -7,7 +7,7 @@ import amplitude from 'amplitude-js';
 const OuterDiv = styled.div`
   border: 1px solid #ddd;
   border-top-width: 0;
-  background-color: #fcfcfc;
+  background-color: #fff;
   color: #333;
   padding: 20px;
   width: 40%;
