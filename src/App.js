@@ -130,7 +130,7 @@ function App() {
         </Flex>
       </OuterFlex>
       <SelectBar />
-      <LabelMini>Want to help others in your class?</LabelMini><br/>
+      <LabelMini>Want to help your class?</LabelMini><br/>
       <Button2
         onClick={() => {
           history.push("/submit");
