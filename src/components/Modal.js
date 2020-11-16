@@ -205,8 +205,8 @@ const Modal = ({ noGroupMe, className, classLink, setClicked }) => {
               action: "Click",
               label: className,
             });
-            amplitude.getInstance().logEvent(className, {
-              category: "Join",
+            amplitude.getInstance().logEvent("Join", {
+              className: className,
               action: "Click",
             });
             setClicked(false);
