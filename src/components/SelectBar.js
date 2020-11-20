@@ -59,6 +59,41 @@ export default SelectBar;
 
 const options = [
   {
+    name: "ECON 101 - Caldwell",
+    link: "https://groupme.com/join_group/61903233/hctyxsug",
+    NoGroupMe: false,
+  },
+  {
+    name: "POLISCI 160",
+    link: "https://groupme.com/join_group/61915301/sippoiry",
+    NoGroupMe: false,
+  },
+  {
+    name: "ASIANLAN 175",
+    link: "https://groupme.com/join_group/61999569/rzk78ebt",
+    NoGroupMe: false,
+  },
+  {
+    name: "EECS 485",
+    link: "https://groupme.com/join_group/61677127/ekyeeale",
+    NoGroupMe: false,
+  },
+  {
+    name: "EECS 376",
+    link: "https://groupme.com/join_group/62495919/tlegt9du",
+    NoGroupMe: false,
+  },
+  {
+    name: "MATH 351",
+    link: "https://groupme.com/join_group/62087336/n1xc5ou8",
+    NoGroupMe: false,
+  },
+  {
+    name: "MATH 316",
+    link: "https://groupme.com/join_group/62159047/zlp0zvww",
+    NoGroupMe: false,
+  },
+  {
     name: "CHEM 130",
     link: "https://groupme.com/join_group/61906424/us2Na09e",
     NoGroupMe: false,
