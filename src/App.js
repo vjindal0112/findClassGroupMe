@@ -130,13 +130,13 @@ function App() {
         </Flex>
       </OuterFlex>
       <SelectBar />
-      <LabelMini>Want to help your class?</LabelMini><br/>
+      <LabelMini>Do we have the wrong link?</LabelMini><br/>
       <Button2
         onClick={() => {
           history.push("/submit");
         }}
       >
-        Add a GroupMe
+        Change a GroupMe link
       </Button2>
     </div>
   );

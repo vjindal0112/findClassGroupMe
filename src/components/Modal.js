@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import styled from "styled-components";
 import { BLUE } from "../constants";
 import { Row, Col, Input } from "./styles";
@@ -99,6 +99,12 @@ const Modal = ({ noGroupMe, className, classLink, setClicked }) => {
   const specialChars = ["!", "*", "&", "^", "$", "#"];
   let url = useLocation();
 
+  useEffect(() => {
+    if (localStorage.getItem("email")) {
+      setEmail(localStorage.getItem("email"));
+    }
+  }, [])
+
   function pushEmailToSheets() {
     var formData = new FormData();
 
@@ -136,6 +142,7 @@ const Modal = ({ noGroupMe, className, classLink, setClicked }) => {
         formData.append("ref", url.search.substr(5));
       }
     }
+    localStorage.setItem("email", email);
     fetch(
       "https://script.google.com/macros/s/AKfycbyNkoQg5Hr-dcJM4hOloxV_ilPCLrm02vKclEQrO96DJWPC3XIA/exec",
       { method: "POST", body: formData }
