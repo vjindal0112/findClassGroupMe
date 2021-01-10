@@ -2,11 +2,11 @@ import logo from "./logo.svg";
 import "./App.css";
 import Modal from "./components/Modal";
 import styled from "styled-components";
-import { BLUE } from "./constants";
+import { GMBLUE, BLUE, YELLOW } from "./constants";
 import { Row, Col } from "./components/styles";
 import SelectBar from "./components/SelectBar";
 import ListItem from "./components/ListItem";
-import Header from "./components/Header";
+import Helm from "./components/Helm";
 import ReactGA from "react-ga";
 import { initAmplitude } from "./amplitude";
 import { WaveTop, Heading, Button } from "./components/styles";
@@ -65,6 +65,12 @@ const OuterFlex = styled.div`
   }
 `;
 
+const Logo = styled.img`
+  max-height: 16vh;
+  margin-bottom: 16px;
+  margin-top: 20px;
+`;
+
 const BulletText = styled.div`
   margin-left: 20px;
   font-size: 16px;
@@ -101,15 +107,60 @@ const LabelMini = styled.div`
   margin-top: 12px;
 `;
 
+const Header = styled.div`
+  height: 12vh;
+  background-color: ${BLUE};
+  width: 100%;
+  color: #fff;
+  font-family: Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue",
+    sans-serif;
+  font-weight: bold;
+
+  div {
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, 150%);
+  }
+
+  a {
+    text-decoration: none;
+    color: #fff;
+    /* background: linear-gradient(to right, #fda085 0%, #f6d365 51%, #f6d365 100%); */
+    transition: 0.25s ease-out;
+    :visited {
+      color: #fff;
+    }
+    :hover {
+      transition: 0.5s;
+      color: ${YELLOW}
+      /* background: linear-gradient(
+        to right,
+        #f6d365 0%,
+        #fda085 51%,
+        #f6d365 100%
+      ); */
+      /* -webkit-background-clip: text;
+      background-clip: text;
+      -webkit-text-fill-color: transparent; */
+    }
+  }
+`;
+
 function App() {
   let history = useHistory();
 
   return (
     <div className="App">
-      <Header />
-      <WaveTop src="/waveTop.svg" />
+      <Helm />
+      <Header>
+        <div>
+          <a href="/submit">Change a GroupMe Link</a>&nbsp;&nbsp;&nbsp; | &nbsp;&nbsp;&nbsp; <a>Find a Study Group</a>
+        </div>
+      </Header>
+      {/* <WaveTop src="/waveTop.svg" /> */}
+      <Logo src="./StudyBuddyLogo.png" />
       <Heading>
-        FindMyClass<span style={{ color: BLUE }}>Group.Me</span>
+        Find your <span style={{ color: GMBLUE }}>GroupMe</span>
       </Heading>
       <OuterFlex>
         <Flex>
@@ -130,14 +181,15 @@ function App() {
         </Flex>
       </OuterFlex>
       <SelectBar />
-      <LabelMini>Do we have the wrong link?</LabelMini><br/>
+      {/* <LabelMini>Do we have the wrong link?</LabelMini>
+      <br />
       <Button2
         onClick={() => {
           history.push("/submit");
         }}
       >
         Change a GroupMe link
-      </Button2>
+      </Button2> */}
     </div>
   );
 }

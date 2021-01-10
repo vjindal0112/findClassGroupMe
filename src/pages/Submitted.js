@@ -4,7 +4,7 @@ import { WaveTop, Input, Heading, Button } from "../components/styles";
 import { BLUE } from "../constants";
 import styled from "styled-components";
 import { useHistory } from "react-router-dom";
-import Header from '../components/Header';
+import Helm from '../components/Helm';
 
 const Label = styled.div`
   margin-bottom: 8px;
@@ -26,7 +26,7 @@ export default function Submitted() {
 
   return (
     <div className="App">
-      <Header title="Thanks"/>
+      <Helm title="Thanks"/>
       <WaveTop src="/waveTop.svg" />
       <Heading>Thanks for submitting</Heading>
       <br />

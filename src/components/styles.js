@@ -39,7 +39,7 @@ export const WaveTop = styled.img`
 `;
 
 export const Input = styled.input`
-  border: 2px solid #05aff0;
+  border: 2px solid ${BLUE};
   font-size: 16px;
   padding: 12px;
   background-color: #fff;
@@ -61,22 +61,22 @@ export const Heading = styled.div`
   font-size: 60px;
   font-weight: bold;
   color: #333;
-  padding-top: 12%;
+  /* padding-top: 12%; */
 
   @media (max-width: 1025px) {
     font-size: 48px;
-    padding-top: 16%;
+    /* padding-top: 16%; */
   }
 
   @media (max-width: 768px) {
     font-size: 28px;
-    padding-top: 28%;
+    /* padding-top: 28%; */
   }
 
   @media (max-width: 320px) {
     margin-left: 10px;
     font-size: 24px;
-    padding-top: 40%;
+    /* padding-top: 40%; */
   }
 
   @media (max-width: 281px) {

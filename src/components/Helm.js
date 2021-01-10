@@ -1,7 +1,7 @@
 import React from "react";
 import { Helmet } from "react-helmet";
 
-export default function Header({title, description}) {
+export default function Helm({title, description}) {
   return (
     <>
       <Helmet
