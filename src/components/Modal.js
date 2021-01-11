@@ -8,7 +8,7 @@ import { useLocation } from "react-router-dom";
 
 const ModalDiv = styled.div`
   border-radius: 8px;
-  background-color: #fafafa;
+  background-color: #fff;
   position: absolute;
   left: 50%;
   transform: translate(-50%, -50%);
@@ -25,7 +25,7 @@ const ModalDiv = styled.div`
 `;
 
 const Button = styled.div`
-  background: #05aff0;
+  background: ${BLUE};
   border-radius: 8px;
   padding: 20px;
   color: #fafafa;
@@ -61,10 +61,10 @@ const CloseOut = styled.img`
 `;
 
 const DInput = styled.input`
-  border: 2px solid #05aff0;
+  border: 2px solid ${BLUE};
   font-size: 16px;
   padding: 8px 12px;
-  background-color: #fcfcfc;
+  background-color: #fff;
   width: 40%;
   display: flex;
   margin: 0 auto;
@@ -144,7 +144,7 @@ const Modal = ({ noGroupMe, className, classLink, setClicked }) => {
     }
     localStorage.setItem("email", email);
     fetch(
-      "https://script.google.com/macros/s/AKfycbyNkoQg5Hr-dcJM4hOloxV_ilPCLrm02vKclEQrO96DJWPC3XIA/exec",
+      "https://script.google.com/macros/s/AKfycbz4a0eRlOFubwveQopK2wYix4O95rcoQeH3GEFXk_EOFHmfYT39JJ0WcQ/exec",
       { method: "POST", body: formData }
     );
     return true;
