@@ -5885,7 +5885,7 @@ const options = [
     link: "https://app.groupme.com/join_group/65213192/CPikvh5E",
   },
   {
-    name: "ENGLISH 125 - Thum-O'Brien",
+    name: "ENGLISH 125 - Thum-OBrien",
     link: "https://app.groupme.com/join_group/65213197/dqz8BhCf",
   },
   {
@@ -6389,7 +6389,7 @@ const options = [
     link: "https://app.groupme.com/join_group/65213564/TvvNASCA",
   },
   {
-    name: "ENGLISH 323 - O'Dowd",
+    name: "ENGLISH 323 - ODowd",
     link: "https://app.groupme.com/join_group/65213566/8dmbRFrp",
   },
   {
@@ -6457,7 +6457,7 @@ const options = [
     link: "https://app.groupme.com/join_group/65213609/5MbADmvv",
   },
   {
-    name: "ENGLISH 423 - O'Dowd",
+    name: "ENGLISH 423 - ODowd",
     link: "https://app.groupme.com/join_group/65213610/ZnTHwn6G",
   },
   {
@@ -7213,7 +7213,7 @@ const options = [
     link: "https://app.groupme.com/join_group/65214712/4PKM2zV6",
   },
   {
-    name: "ENVIRON 350 - D'Anieri",
+    name: "ENVIRON 350 - DAnieri",
     link: "https://app.groupme.com/join_group/65214719/yFajMRGZ",
   },
   {
@@ -7265,7 +7265,7 @@ const options = [
     link: "https://app.groupme.com/join_group/65214894/ysHqs48I",
   },
   {
-    name: "ENVIRON 462 - D'Anieri",
+    name: "ENVIRON 462 - DAnieri",
     link: "https://app.groupme.com/join_group/65214902/1UjK3N8G",
   },
   {
@@ -9306,7 +9306,7 @@ const options = [
     link: "https://app.groupme.com/join_group/65230453/Fk3lTDgL",
   },
   {
-    name: "URP 425 - D'Anieri",
+    name: "URP 425 - DAnieri",
     link: "https://app.groupme.com/join_group/65230463/H1XRSkBl",
   },
   {
@@ -10274,7 +10274,7 @@ const options = [
     link: "https://app.groupme.com/join_group/65206565/7hRbLsK3",
   },
   {
-    name: "IOE 333 - D'Souza",
+    name: "IOE 333 - DSouza",
     link: "https://app.groupme.com/join_group/65206571/IpI0nhAY",
   },
   {
@@ -12534,7 +12534,7 @@ const options = [
     link: "https://app.groupme.com/join_group/65215561/rFSmKeOD",
   },
   {
-    name: "PAT 100 - O'Modhrain, Ulintz",
+    name: "PAT 100 - OModhrain, Ulintz",
     link: "https://app.groupme.com/join_group/65215568/ePh1M4KI",
   },
   {
@@ -12542,7 +12542,7 @@ const options = [
     link: "https://app.groupme.com/join_group/65215578/D0JBvgOi",
   },
   {
-    name: "PAT 102 - O'Modhrain, Ulintz",
+    name: "PAT 102 - OModhrain, Ulintz",
     link: "https://app.groupme.com/join_group/65215589/sm83aN05",
   },
   {
@@ -12594,7 +12594,7 @@ const options = [
     link: "https://app.groupme.com/join_group/65215687/kd8YzdSj",
   },
   {
-    name: "PAT 300 - O'Modhrain",
+    name: "PAT 300 - OModhrain",
     link: "https://app.groupme.com/join_group/65215696/FmkT9ewV",
   },
   {
@@ -12674,7 +12674,7 @@ const options = [
     link: "https://app.groupme.com/join_group/65215936/e3LIUYGG",
   },
   {
-    name: "PAT 490 - O'Modhrain",
+    name: "PAT 490 - OModhrain",
     link: "https://app.groupme.com/join_group/65215942/f3RoYqKS",
   },
   {
@@ -12826,7 +12826,7 @@ const options = [
     link: "https://app.groupme.com/join_group/65216383/fWo5zJq4",
   },
   {
-    name: "PHRMACOL 425 - Jutkiewicz, Courtney, O'Malley, Hernandez-Casner",
+    name: "PHRMACOL 425 - Jutkiewicz, Courtney, OMalley, Hernandez-Casner",
     link: "https://app.groupme.com/join_group/65216388/0L15KMXv",
   },
   {
@@ -13718,7 +13718,7 @@ const options = [
     link: "https://app.groupme.com/join_group/65221293/c2WKcmWN",
   },
   {
-    name: "PORTUG 287 - Vieira Parrine Sant'Ana",
+    name: "PORTUG 287 - Vieira Parrine SantAna",
     link: "https://app.groupme.com/join_group/65221450/rScuTkla",
   },
   {
@@ -14650,7 +14650,7 @@ const options = [
     link: "https://app.groupme.com/join_group/65227682/Sdu5BhlD",
   },
   {
-    name: "RCSSCI 350 - D'Anieri",
+    name: "RCSSCI 350 - DAnieri",
     link: "https://app.groupme.com/join_group/65227688/F0c8z12J",
   },
   {
