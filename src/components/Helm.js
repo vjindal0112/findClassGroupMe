@@ -24,7 +24,7 @@ export default function Helm({title, description}) {
           { name: "og:url", content: "https://findmyclassgroup.me" },
           {
             name: "og:image",
-            content: "https://findmyclassgroup.me/logo.png",
+            content: "https://findmyclassgroup.me/SocialSharing.png",
           },
           {
             name: "twitter:url",
@@ -40,7 +40,7 @@ export default function Helm({title, description}) {
           },
           {
             name: "twitter:image",
-            content: "https://findmyclassgroup.me/logo.png",
+            content: "https://findmyclassgroup.me/SocialSharing.png",
           },
         ]}
       >
