@@ -3,7 +3,6 @@ import styled from "styled-components";
 import { BLUE } from "../constants";
 import { Row, Col, Input } from "./styles";
 import ReactGA from "react-ga";
-import amplitude from "amplitude-js";
 import { useLocation } from "react-router-dom";
 
 const ModalDiv = styled.div`
@@ -208,10 +207,6 @@ const Modal = ({ noGroupMe, className, classLink, setClicked }) => {
               category: "Join",
               action: "Click",
               label: className,
-            });
-            amplitude.getInstance().logEvent("Join", {
-              className: className,
-              action: "Click",
             });
             setClicked(false);
           } else {

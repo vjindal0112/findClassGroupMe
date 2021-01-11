@@ -8,11 +8,9 @@ import SelectBar from "./components/SelectBar";
 import ListItem from "./components/ListItem";
 import Helm from "./components/Helm";
 import ReactGA from "react-ga";
-import { initAmplitude } from "./amplitude";
 import { WaveTop, Heading, Button, Header, Logo } from "./components/styles";
 import { useHistory } from "react-router-dom";
 
-initAmplitude();
 ReactGA.initialize("UA-176116817-5");
 ReactGA.pageview(window.location.pathname + window.location.search);
 
