@@ -9,7 +9,7 @@ import ListItem from "./components/ListItem";
 import Helm from "./components/Helm";
 import ReactGA from "react-ga";
 import { WaveTop, Heading, Button, Header, Logo } from "./components/styles";
-import { useHistory } from "react-router-dom";
+import { Link, useHistory } from "react-router-dom";
 
 ReactGA.initialize("UA-176116817-5");
 ReactGA.pageview(window.location.pathname + window.location.search);
@@ -63,8 +63,6 @@ const OuterFlex = styled.div`
   }
 `;
 
-
-
 const BulletText = styled.div`
   margin-left: 20px;
   font-size: 16px;
@@ -101,8 +99,6 @@ const LabelMini = styled.div`
   margin-top: 12px;
 `;
 
-
-
 function App() {
   let history = useHistory();
 
@@ -111,14 +107,21 @@ function App() {
       <Helm />
       <Header>
         <div>
-          <a href="/submit">
-            Change a <span>GroupMe</span> Link
+          <a>
+            <Link to="/submit">
+              Change a <span>GroupMe</span> Link
+            </Link>
           </a>
-          &nbsp; | &nbsp; <a href="https://umichstudybuddies.com" target="_blank">Find a Study Group</a>
+          &nbsp; | &nbsp;{" "}
+          <a href="https://umichstudybuddies.com" target="_blank">
+            Find a Study Group
+          </a>
         </div>
       </Header>
       {/* <WaveTop src="/waveTop.svg" /> */}
-      <a href="/"><Logo src="./StudyBuddyLogo.png" /></a>
+      <a href="/">
+        <Logo src="./StudyBuddyLogo.png" />
+      </a>
       <Heading>
         Find your <span style={{ color: GMBLUE }}>GroupMe</span>
       </Heading>
