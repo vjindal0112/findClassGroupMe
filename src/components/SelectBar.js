@@ -2545,12 +2545,8 @@ const options = [
     link: "https://app.groupme.com/join_group/65202901/ArkOZtTP",
   },
   {
-    name: "BIOLOGY 172 - Clark, Simmons",
+    name: "BIO 172",
     link: "https://app.groupme.com/join_group/65202911/Q1jCWvSt",
-  },
-  {
-    name: "BIOLOGY 172 - Wood",
-    link: "https://app.groupme.com/join_group/65202922/vteNlswZ",
   },
   {
     name: "BIOLOGY 173 - Ammerlaan",
@@ -3134,28 +3130,12 @@ const options = [
     link: "https://app.groupme.com/join_group/65206395/Db62zEaZ",
   },
   {
-    name: "CHEM 125 - Poniatowski",
+    name: "CHEM 125",
     link: "https://app.groupme.com/join_group/65206409/m9NiSZsA",
-  },
-  {
-    name: "CHEM 126",
-    link: "https://app.groupme.com/join_group/65206424/UChGfsNv",
-  },
-  {
-    name: "CHEM 130 - McCrory",
-    link: "https://app.groupme.com/join_group/65206437/iNaFMihA",
-  },
-  {
-    name: "CHEM 130 - Albright",
-    link: "https://app.groupme.com/join_group/65206446/BhqdoZfY",
   },
   {
     name: "CHEM 130",
     link: "https://app.groupme.com/join_group/65206451/QCPWEIcO",
-  },
-  {
-    name: "CHEM 130 - Gottfried",
-    link: "https://app.groupme.com/join_group/65206464/8xnHr5eE",
   },
   {
     name: "CHEM 210 - Tuttle",
@@ -5070,7 +5050,7 @@ const options = [
     link: "https://app.groupme.com/join_group/65212651/RwbgCwgY",
   },
   {
-    name: "EECS 183 - Diaz, Arthur, Dorf",
+    name: "EECS 183",
     link: "https://app.groupme.com/join_group/65212653/wyCFZiPU",
   },
   {
@@ -11019,32 +10999,8 @@ const options = [
     link: "https://app.groupme.com/join_group/65210967/zrn4cLgr",
   },
   {
-    name: "MATH 115 - Horvath",
-    link: "https://app.groupme.com/join_group/65210969/VPG2r3to",
-  },
-  {
-    name: "MATH 115 - Johnson",
-    link: "https://app.groupme.com/join_group/65210972/sdAoDfFR",
-  },
-  {
-    name: "MATH 115 - Khumbah",
-    link: "https://app.groupme.com/join_group/65210977/m8w87fwy",
-  },
-  {
-    name: "MATH 115 - Lee",
-    link: "https://app.groupme.com/join_group/65210979/R4ChbU8W",
-  },
-  {
     name: "MATH 116",
     link: "https://app.groupme.com/join_group/65210983/EQlKsXmm",
-  },
-  {
-    name: "MATH 116 - Farokhrani",
-    link: "https://app.groupme.com/join_group/65210984/qwfTzvtS",
-  },
-  {
-    name: "MATH 116 - Lofton",
-    link: "https://app.groupme.com/join_group/65210986/Zbxy46hx",
   },
   {
     name: "MATH 117",
@@ -11067,56 +11023,12 @@ const options = [
     link: "https://app.groupme.com/join_group/65211009/xvfZyPSv",
   },
   {
-    name: "MATH 214 - Burns Jr",
-    link: "https://app.groupme.com/join_group/65211014/OFdfroPw",
-  },
-  {
-    name: "MATH 214 - Datta",
-    link: "https://app.groupme.com/join_group/65211017/5NehiCmW",
-  },
-  {
-    name: "MATH 214 - McCleerey",
-    link: "https://app.groupme.com/join_group/65211023/XxIcBhf7",
-  },
-  {
-    name: "MATH 214 - Minoccheri",
-    link: "https://app.groupme.com/join_group/65211026/LPiCGUUy",
-  },
-  {
     name: "MATH 215",
     link: "https://app.groupme.com/join_group/65211030/HCZ3LBX8",
   },
   {
-    name: "MATH 215 - Heffers",
-    link: "https://app.groupme.com/join_group/65211035/qu15rghM",
-  },
-  {
-    name: "MATH 215 - Hong",
-    link: "https://app.groupme.com/join_group/65211036/PAVcHzbp",
-  },
-  {
-    name: "MATH 215 - Katz",
-    link: "https://app.groupme.com/join_group/65211083/egvo1vD0",
-  },
-  {
     name: "MATH 216",
     link: "https://app.groupme.com/join_group/65211089/rqZsq39L",
-  },
-  {
-    name: "MATH 216 - Anderson",
-    link: "https://app.groupme.com/join_group/65211092/PiCu9woj",
-  },
-  {
-    name: "MATH 216 - Norton",
-    link: "https://app.groupme.com/join_group/65211096/Vq6gYiUY",
-  },
-  {
-    name: "MATH 216 - Prokhorov",
-    link: "https://app.groupme.com/join_group/65211099/zL76HOX8",
-  },
-  {
-    name: "MATH 216 - Storey",
-    link: "https://app.groupme.com/join_group/65211101/TwodBi6q",
   },
   {
     name: "MATH 217",
