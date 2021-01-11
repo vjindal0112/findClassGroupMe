@@ -133,15 +133,42 @@ export const Header = styled.div`
     width: 100%;
     text-align: center;
 
-    @media (max-width: 280px) {
-      font-size: 12px;
-    }
-    @media (max-width: 300px) {
-      font-size: 14px;
-      padding-top: 20px;
+    @media (min-height: 1023px) {
+      font-size: 22px;
+      padding-top: 30px;
     }
 
-    span { /* reduce width for smaller phones */
+    @media (max-width: 421px) {
+      font-size: 16px;
+      padding-top: 24px;
+    }
+
+    @media (max-width: 376px) {
+      font-size: 16px;
+      padding-top: 24px;
+    }
+
+    @media (min-height: 811px) and (max-width: 376px) {
+      font-size: 16px;
+      padding-top: 28px;
+    }
+
+    @media (max-width: 321px) and (min-height: 567px) {
+      font-size: 14px;
+      padding-top: 22px;
+    }
+
+    @media (max-width: 300px) {
+      font-size: 14px;
+      padding-top: 24px;
+    }
+
+    @media (max-width: 281px) {
+      font-size: 14px;
+    }
+
+    span {
+      /* reduce width for smaller phones */
       display: default;
       @media (max-width: 400px) {
         display: none;

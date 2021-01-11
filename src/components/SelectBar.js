@@ -5110,36 +5110,8 @@ const options = [
     link: "https://app.groupme.com/join_group/65212682/KCE59m22",
   },
   {
-    name: "EECS 280 - DeOrio",
-    link: "https://app.groupme.com/join_group/65212685/Tw5HIuXW",
-  },
-  {
-    name: "EECS 280 - Juett",
-    link: "https://app.groupme.com/join_group/65212687/pQcwZ8kV",
-  },
-  {
-    name: "EECS 280 - Beaumont",
-    link: "https://app.groupme.com/join_group/65212688/plLdjtDP",
-  },
-  {
-    name: "EECS 281 - Darden, Noble, Paoletti, Garcia-Ramirez",
-    link: "https://app.groupme.com/join_group/65212691/a2LBomFt",
-  },
-  {
-    name: "EECS 281 - Paoletti, Darden, Noble, Garcia-Ramirez",
-    link: "https://app.groupme.com/join_group/65212696/HmrBerA1",
-  },
-  {
-    name: "EECS 281 - Paoletti, Darden, Garcia-Ramirez, Noble",
-    link: "https://app.groupme.com/join_group/65212698/leuS5GVk",
-  },
-  {
-    name: "EECS 281 - Garcia-Ramirez, Darden, Paoletti, Noble",
-    link: "https://app.groupme.com/join_group/65212701/zzHdcThI",
-  },
-  {
-    name: "EECS 281 - Noble, Darden, Paoletti, Garcia-Ramirez",
-    link: "https://app.groupme.com/join_group/65212704/4FV7uqlP",
+    name: "EECS 280",
+    link: "https://groupme.com/join_group/64407946/mIbNeVw6",
   },
   {
     name: "EECS 301 - Stark",
@@ -8717,20 +8689,9 @@ const options = [
     name: "STATS 206",
     link: "https://app.groupme.com/join_group/65227297/l1Tbjamo",
   },
+
   {
-    name: "STATS 250 - Deeke",
-    link: "https://app.groupme.com/join_group/65227308/8N7ZS8Up",
-  },
-  {
-    name: "STATS 250 - Hsing",
-    link: "https://app.groupme.com/join_group/65227317/yqTkZQor",
-  },
-  {
-    name: "STATS 250 - Miller",
-    link: "https://app.groupme.com/join_group/65227327/0EkE3ukb",
-  },
-  {
-    name: "STATS 250 - Romero",
+    name: "STATS 250",
     link: "https://app.groupme.com/join_group/65227332/iozFZqWH",
   },
   {
@@ -9950,7 +9911,7 @@ const options = [
     link: "https://app.groupme.com/join_group/65239010/9H2HyoLa",
   },
   {
-    name: "EECS 281 - Darden, Noble, Garcia-Ramirez, Paoletti",
+    name: "EECS 281",
     link: "https://app.groupme.com/join_group/65239222/9SxBEusz",
   },
   {
