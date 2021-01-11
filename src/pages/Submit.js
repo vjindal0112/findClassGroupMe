@@ -42,7 +42,7 @@ export default function Submit() {
     }
 
     fetch(
-      "https://script.google.com/macros/s/AKfycbxFnhATTvxRVR7s6RNcyttBiaU9jlnz8A_1aYSAXd-ACSisW4YH/exec",
+      "https://script.google.com/macros/s/AKfycbxRzud4YPUKToGimytRUXfViGw9lUL6soDsdVKSoYa0adzMI_EAa6L0mg/exec",
       { method: "POST", body: formData }
     );
 

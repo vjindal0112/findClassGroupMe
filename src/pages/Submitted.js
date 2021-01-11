@@ -1,6 +1,6 @@
 import React from "react";
 import "../App.css";
-import { WaveTop, Input, Heading, Button } from "../components/styles";
+import { Heading, Button, Logo, Header } from "../components/styles";
 import { BLUE } from "../constants";
 import styled from "styled-components";
 import { useHistory } from "react-router-dom";
@@ -27,8 +27,19 @@ export default function Submitted() {
   return (
     <div className="App">
       <Helm title="Thanks"/>
-      <WaveTop src="/waveTop.svg" />
-      <Heading>Thanks for submitting</Heading>
+      <Header>
+        <div>
+          <a href="/submit">
+            Change a <span>GroupMe</span> Link
+          </a>
+          &nbsp; | &nbsp; <a href="https://umichstudybuddies.com" target="_blank">Find a Study Group</a>
+        </div>
+      </Header>
+      {/* <WaveTop src="/waveTop.svg" /> */}
+      <a href="/"><Logo src="./StudyBuddyLogo.png" /></a>
+      <Heading>
+        Thanks for submitting
+      </Heading>
       <br />
       <Label>
         The GroupMe link will help people find others to talk to. It should be
