@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { BLUE } from "../constants";
+import { GMBLUE, BLUE, YELLOW } from "../constants";
 
 export const Row = styled.div`
   display: flex;
@@ -58,7 +58,7 @@ export const Input = styled.input`
 `;
 
 export const Heading = styled.div`
-  font-size: 60px;
+  font-size: 54px;
   font-weight: bold;
   color: #333;
   /* padding-top: 12%; */
@@ -87,6 +87,7 @@ export const Heading = styled.div`
 export const Button = styled.a`
   :hover {
     box-shadow: 6px 6px 6px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
   }
   padding: 16px;
   margin: 24px auto;
@@ -99,4 +100,72 @@ export const Button = styled.a`
   align-items: center;
   font-weight: bold;
   box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.2);
+`;
+
+export const Header = styled.div`
+  height: 10vh;
+
+  @media (min-width: 1050px) {
+    height: 10vh;
+  }
+
+  @media (max-width: 1050px) {
+    height: 6vh;
+  }
+
+  @media (max-width: 800px) {
+    height: 8vh;
+  }
+
+  @media (max-width: 700px) {
+    height: 10vh;
+  }
+
+  background-color: ${BLUE};
+  width: 100%;
+  color: #fff;
+  font-family: Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue",
+    sans-serif;
+  font-weight: bold;
+
+  div {
+    padding-top: 24px;
+    width: 100%;
+    text-align: center;
+
+    @media (max-width: 280px) {
+      font-size: 12px;
+    }
+    @media (max-width: 300px) {
+      font-size: 14px;
+      padding-top: 20px;
+    }
+
+    span { /* reduce width for smaller phones */
+      display: default;
+      @media (max-width: 400px) {
+        display: none;
+      }
+    }
+  }
+
+  a {
+    text-decoration: none;
+    color: #fff;
+    /* background: linear-gradient(to right, #fda085 0%, #f6d365 51%, #f6d365 100%); */
+    transition: 0.25s ease-out;
+    :visited {
+      color: #fff;
+    }
+    :hover {
+      transition: 0.5s;
+      color: ${YELLOW};
+    }
+  }
+`;
+
+export const Logo = styled.img`
+  max-height: 16vh;
+  margin-bottom: 16px;
+  margin-top: 20px;
 `;

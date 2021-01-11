@@ -1,10 +1,10 @@
 import React, { useState } from "react";
 import "../App.css";
-import { WaveTop, Input, Heading, Button } from "../components/styles";
-import { BLUE } from "../constants";
+import { GMBLUE } from "../constants";
 import styled from "styled-components";
 import { useHistory } from "react-router-dom";
 import Helm from "../components/Helm"
+import { Heading, Input, Button, Header, Logo } from "../components/styles";
 
 const Label = styled.div`
   font-weight: bold;
@@ -52,9 +52,18 @@ export default function Submit() {
   return (
     <div className="App">
       <Helm title="Submit"/>
-      <WaveTop src="/waveTop.svg" />
+      <Header>
+        <div>
+          <a href="/submit">
+            Change a <span>GroupMe</span> Link
+          </a>
+          &nbsp; | &nbsp; <a href="https://umichstudybuddies.com" target="_blank">Find a Study Group</a>
+        </div>
+      </Header>
+      {/* <WaveTop src="/waveTop.svg" /> */}
+      <a href="/"><Logo src="./StudyBuddyLogo.png" /></a>
       <Heading>
-        Submit a <span style={{ color: BLUE }}>GroupMe</span> Link
+        Change a <span style={{ color: GMBLUE }}>GroupMe</span> Link
       </Heading>
       <br />
       <br />
