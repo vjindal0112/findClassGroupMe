@@ -35,7 +35,6 @@ export default function Submitted() {
           &nbsp; | &nbsp; <a href="https://umichstudybuddies.com" target="_blank">Find a Study Group</a>
         </div>
       </Header>
-      {/* <WaveTop src="/waveTop.svg" /> */}
       <a href="/"><Logo src="./StudyBuddyLogo.png" /></a>
       <Heading>
         Thanks for submitting
