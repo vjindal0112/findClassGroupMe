@@ -1,14 +1,10 @@
-import logo from "./logo.svg";
 import "./App.css";
-import Modal from "./components/Modal";
 import styled from "styled-components";
-import { GMBLUE, BLUE, YELLOW } from "./constants";
-import { Row, Col } from "./components/styles";
+import { GMBLUE, BLUE } from "./constants";
 import SelectBar from "./components/SelectBar";
-import ListItem from "./components/ListItem";
 import Helm from "./components/Helm";
 import ReactGA from "react-ga";
-import { WaveTop, Heading, Button, Header, Logo } from "./components/styles";
+import { Heading, Header, Logo } from "./components/styles";
 import { Link, useHistory } from "react-router-dom";
 
 ReactGA.initialize("UA-176116817-5");
@@ -108,7 +104,16 @@ function App() {
       <Header>
         <div>
           <a>
-            <Link to="/submit">
+            <Link
+              onClick={(e) =>
+                ReactGA.event({
+                  category: "Header",
+                  action: "Click",
+                  label: "Change link",
+                })
+              }
+              to="/submit"
+            >
               Change a <span>GroupMe</span> Link
             </Link>
           </a>

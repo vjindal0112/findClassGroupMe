@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import styled from "styled-components";
 import { BLUE } from "../constants";
-import { Row, Col, Input } from "./styles";
+import { Row, Col } from "./styles";
 import ReactGA from "react-ga";
 import { useLocation } from "react-router-dom";
 
@@ -31,20 +31,20 @@ const Button = styled.div`
   font-weight: bold;
 `;
 
-const Checkmark = styled.img`
-  height: 16px;
-`;
+// const Checkmark = styled.img`
+//   height: 16px;
+// `;
 
-const CheckmarkBox = styled.div`
-  height: 24px;
-  width: 24px;
-  border-radius: 4px;
-  border: 1px solid #333;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  transition: all 300ms;
-`;
+// const CheckmarkBox = styled.div`
+//   height: 24px;
+//   width: 24px;
+//   border-radius: 4px;
+//   border: 1px solid #333;
+//   display: flex;
+//   justify-content: center;
+//   align-items: center;
+//   transition: all 300ms;
+// `;
 
 const CloseOut = styled.img`
   height: 20px;

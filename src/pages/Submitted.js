@@ -1,10 +1,10 @@
 import React from "react";
 import "../App.css";
 import { Heading, Button, Logo, Header } from "../components/styles";
-import { BLUE } from "../constants";
 import styled from "styled-components";
-import { useHistory } from "react-router-dom";
-import Helm from '../components/Helm';
+import { useHistory, Link } from "react-router-dom";
+import Helm from "../components/Helm";
+import ReactGA from "react-ga";
 
 const Label = styled.div`
   margin-bottom: 8px;
@@ -26,19 +26,33 @@ export default function Submitted() {
 
   return (
     <div className="App">
-      <Helm title="Thanks"/>
+      <Helm title="Thanks" />
       <Header>
         <div>
-          <a href="/submit">
-            Change a <span>GroupMe</span> Link
+          <a>
+            <Link
+              onClick={(e) =>
+                ReactGA.event({
+                  category: "Header",
+                  action: "Click",
+                  label: "Change link",
+                })
+              }
+              to="/submit"
+            >
+              Change a <span>GroupMe</span> Link
+            </Link>
           </a>
-          &nbsp; | &nbsp; <a href="https://umichstudybuddies.com" target="_blank">Find a Study Group</a>
+          &nbsp; | &nbsp;{" "}
+          <a href="https://umichstudybuddies.com" target="_blank">
+            Find a Study Group
+          </a>
         </div>
       </Header>
-      <a href="/"><Logo src="./StudyBuddyLogo.png" /></a>
-      <Heading>
-        Thanks for submitting
-      </Heading>
+      <Link to="/">
+        <Logo src="./StudyBuddyLogo.png" />
+      </Link>
+      <Heading>Thanks for submitting</Heading>
       <br />
       <Label>
         The GroupMe link will help people find others to talk to. It should be
