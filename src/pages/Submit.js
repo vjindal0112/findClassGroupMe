@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import "../App.css";
 import { GMBLUE } from "../constants";
 import styled from "styled-components";
-import { useHistory } from "react-router-dom";
+import { useHistory, Link } from "react-router-dom";
 import Helm from "../components/Helm"
 import { Heading, Input, Button, Header, Logo } from "../components/styles";
 
@@ -61,7 +61,7 @@ export default function Submit() {
         </div>
       </Header>
       {/* <WaveTop src="/waveTop.svg" /> */}
-      <a href="/"><Logo src="./StudyBuddyLogo.png" /></a>
+      <Link to="/"><Logo src="./StudyBuddyLogo.png" /></Link>
       <Heading>
         Change a <span style={{ color: GMBLUE }}>GroupMe</span> Link
       </Heading>

@@ -1,17 +1,8 @@
-import React, { useState, onChange } from "react";
+import React, { useState } from "react";
 import styled from "styled-components";
 import ListItem from "./ListItem";
 import { Input } from "./styles";
 import ReactGA from "react-ga";
-import amplitude from "amplitude-js";
-
-const options1 = [
-  { name: "AERO ST 1A - Liscombe", link: "https://youtube.com" },
-  { name: "AERO ST 20A - Liscombe", link: "https://youtube.com" },
-  { name: "AERO ST 130A - Jones", link: "https://youtube.com" },
-  { name: "AERO ST 140A - Fowler", link: "https://youtube.com" },
-  { name: "AF AMER 1 - Pierre", link: "https://youtube.com" },
-];
 
 const SelectBar = () => {
   const [query, setQuery] = useState("");
@@ -25,9 +16,6 @@ const SelectBar = () => {
         onClick={() => {
           ReactGA.event({
             category: "Search",
-            action: "Click",
-          });
-          amplitude.getInstance().logEvent("Search", {
             action: "Click",
           });
         }}

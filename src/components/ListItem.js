@@ -2,7 +2,6 @@ import React, { useState } from "react";
 import styled from "styled-components";
 import Modal from "./Modal";
 import ReactGA from "react-ga";
-import amplitude from "amplitude-js";
 
 const OuterDiv = styled.div`
   border: 1px solid #ddd;
@@ -59,10 +58,6 @@ export default function ListItem({ className, classLink, noGroupMe }) {
             category: "ListItem",
             action: "Click",
             label: className,
-          });
-          amplitude.getInstance().logEvent("ListItem", {
-            className: className,
-            action: "Click",
           });
         }}
       >

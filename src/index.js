@@ -9,7 +9,6 @@ import {
   Route,
   BrowserRouter as Router,
   Switch,
-  useParams,
 } from "react-router-dom";
 import ReactGA from "react-ga";
 
