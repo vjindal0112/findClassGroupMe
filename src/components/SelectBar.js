@@ -2116,10 +2116,6 @@ const options = [
     link: "https://app.groupme.com/join_group/65201165/4JIw0wpH",
   },
   {
-    name: "ASTRO 102 - Richstone, Corrales",
-    link: "https://app.groupme.com/join_group/65201174/eAAvFQPL",
-  },
-  {
     name: "ASTRO 105 - Oey",
     link: "https://app.groupme.com/join_group/65201180/BPMT25ai",
   },
@@ -11230,8 +11226,8 @@ const options = [
     link: "https://app.groupme.com/join_group/65211399/MtcbkgAe",
   },
   {
-    name: "MCDB 310 - Akey, Nandakumar",
-    link: "https://app.groupme.com/join_group/65211402/mHD4hbHh",
+    name: "MCDB 310 - Winter 21",
+    link: "https://groupme.com/join_group/64370708/epNV7uic",
   },
   {
     name: "MCDB 321 - Li",
@@ -11844,14 +11840,6 @@ const options = [
   {
     name: "MOVESCI 110 - Bodary, Vesia, Gross",
     link: "https://app.groupme.com/join_group/65212096/xa4NcbB9",
-  },
-  {
-    name: "MOVESCI 110 - Gross, Vesia, Bodary",
-    link: "https://app.groupme.com/join_group/65212099/e0X90Pk0",
-  },
-  {
-    name: "MOVESCI 110 - Vesia, Gross, Bodary",
-    link: "https://app.groupme.com/join_group/65212104/a7sr9lzn",
   },
   {
     name: "MOVESCI 219 - Clark",
