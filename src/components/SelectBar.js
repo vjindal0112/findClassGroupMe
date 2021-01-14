@@ -9846,10 +9846,6 @@ const options = [
     link: "https://groupme.com/join_group/64490720/CKvG5xju",
   },
   {
-    name: "EECS 482 - Kapritsos, Kasikci, Chen",
-    link: "https://app.groupme.com/join_group/65238952/Zz3me3k2",
-  },
-  {
     name: "EECS 514 - Gianchandani",
     link: "https://app.groupme.com/join_group/65238959/m5afOkP4",
   },
