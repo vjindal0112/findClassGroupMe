@@ -1,9 +1,10 @@
 import React, { useState, useEffect } from "react";
 import styled from "styled-components";
-import { BLUE } from "../constants";
+import { BLUE, DULL_BLUE } from "../constants";
 import { Row, Col } from "./styles";
 import ReactGA from "react-ga";
 import { useLocation } from "react-router-dom";
+import ReCAPTCHA from "react-google-recaptcha";
 
 const ModalDiv = styled.div`
   border-radius: 8px;
@@ -24,7 +25,7 @@ const ModalDiv = styled.div`
 `;
 
 const Button = styled.div`
-  background: ${BLUE};
+  background: ${(props) => (props.verified ? BLUE : DULL_BLUE)};
   border-radius: 8px;
   padding: 20px;
   color: #fafafa;
@@ -80,6 +81,7 @@ const DInput = styled.input`
 
 const Modal = ({ noGroupMe, className, classLink, setClicked }) => {
   const [email, setEmail] = useState("");
+  const [verified, setVerified] = useState(false);
   const spamWords = [
     "a",
     "test",
@@ -102,7 +104,7 @@ const Modal = ({ noGroupMe, className, classLink, setClicked }) => {
     if (localStorage.getItem("email")) {
       setEmail(localStorage.getItem("email"));
     }
-  }, [])
+  }, []);
 
   function pushEmailToSheets() {
     var formData = new FormData();
@@ -198,19 +200,38 @@ const Modal = ({ noGroupMe, className, classLink, setClicked }) => {
         </>
       ) : null}
 
+      <Row>
+        <ReCAPTCHA
+          sitekey="6Le_wDkaAAAAAOkt9YLOXveWvH46haqU854YxA20"
+          onChange={(value) => {
+            if(value == null) {
+              setVerified(false)
+            } else {
+              setVerified(true);
+            }
+          }}
+        />
+        <br />
+      </Row>
+
       <Button
+        verified={verified}
         onClick={(e) => {
           e.preventDefault();
-          if (pushEmailToSheets()) {
-            window.open(classLink, "_blank");
-            ReactGA.event({
-              category: "Join",
-              action: "Click",
-              label: className,
-            });
-            setClicked(false);
+          if (verified) {
+            if (pushEmailToSheets()) {
+              window.open(classLink, "_blank");
+              ReactGA.event({
+                category: "Join",
+                action: "Click",
+                label: className,
+              });
+              setClicked(false);
+            } else {
+              alert("The email you have entered is not verified");
+            }
           } else {
-            alert("The email you have entered is not verified");
+            alert("Please prove that you are not a robot");
           }
         }}
       >

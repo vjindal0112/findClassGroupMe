@@ -6,6 +6,7 @@ import Helm from "./components/Helm";
 import ReactGA from "react-ga";
 import { Heading, Header, Logo } from "./components/styles";
 import { Link, useHistory } from "react-router-dom";
+import ReCAPTCHA from "react-google-recaptcha";
 
 ReactGA.initialize("UA-176116817-5");
 ReactGA.pageview(window.location.pathname + window.location.search);
@@ -123,6 +124,7 @@ function App() {
           </a>
         </div>
       </Header>
+
       {/* <WaveTop src="/waveTop.svg" /> */}
       <a href="/">
         <Logo src="./StudyBuddyLogo.png" />
