@@ -32,7 +32,7 @@ export default function Submit() {
     if (!email.toLowerCase().includes("@umich.edu")) {
       alert("Please enter your UMich email");
       return false;
-    } else if (link == "" || email == "" || className == "") {
+    } else if (link === "" || email === "" || className === "") {
       alert("Please fill out all fields");
       return false;
     } else {

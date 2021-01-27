@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import styled from "styled-components";
 import ListItem from "./ListItem";
 import { Input } from "./styles";
 import ReactGA from "react-ga";
@@ -20,7 +19,7 @@ const SelectBar = () => {
           });
         }}
       />
-      {query != ""
+      {query !== ""
         ? options
             .filter((obj) =>
               obj.name.toLowerCase().includes(query.toLowerCase())

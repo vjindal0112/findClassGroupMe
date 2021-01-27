@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { GMBLUE, BLUE, YELLOW } from "../constants";
+import { BLUE, YELLOW } from "../constants";
 
 export const Row = styled.div`
   display: flex;

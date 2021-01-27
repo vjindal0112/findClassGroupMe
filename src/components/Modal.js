@@ -82,6 +82,7 @@ const DInput = styled.input`
 const Modal = ({ noGroupMe, className, classLink, setClicked }) => {
   const [email, setEmail] = useState("");
   const [verified, setVerified] = useState(false);
+  const [emailSent, setEmailSent] = useState(false);
   const spamWords = [
     "a",
     "test",
@@ -114,7 +115,7 @@ const Modal = ({ noGroupMe, className, classLink, setClicked }) => {
 
     let spam = false;
     spamWords.map((word, index) => {
-      if (before == word) {
+      if (before === word) {
         spam = true;
       }
     });
@@ -130,7 +131,7 @@ const Modal = ({ noGroupMe, className, classLink, setClicked }) => {
     }
 
     if (
-      !(tempEmail.toLowerCase().slice(tempEmail.length - 10) == "@umich.edu") ||
+      !(tempEmail.toLowerCase().slice(tempEmail.length - 10) === "@umich.edu") ||
       before.includes(" ") ||
       spam ||
       before.length <= 1
@@ -139,7 +140,7 @@ const Modal = ({ noGroupMe, className, classLink, setClicked }) => {
     } else {
       formData.append("email", tempEmail.toLowerCase().trim());
       formData.append("className", className);
-      if (url.search != "") {
+      if (url.search !== "") {
         formData.append("ref", url.search.substr(5));
       }
     }
@@ -170,73 +171,89 @@ const Modal = ({ noGroupMe, className, classLink, setClicked }) => {
           {className}
         </div>
       </Row>
-      <Row style={{ marginTop: "12px" }}>
-        <Col
-          md={1}
-          sm={1}
-          xs={1}
-          style={{ alignItems: "center", justifyContent: "center" }}
-        >
-          Verify you are a student
-        </Col>
-        <Col md={11} sm={11} xs={11} style={{ marginTop: "10px" }}>
-          <DInput
-            style={{ boxShadow: "none", width: "100%" }}
-            placeholder="UMich Email"
-            value={email}
-            onChange={(e) => setEmail(e.target.value)}
-          />
-        </Col>
-      </Row>
-      <br />
-      {noGroupMe ? (
+      {emailSent ? (
+        <Row ><div style={{"padding": "4px", "maxWidth": "200px", "margin": "12px auto", "marginTop": "12px", "lineHeight": "1.4"}}>Check your email in a few minutes for the link!</div></Row>
+      ) : (
         <>
-          <Row>
-            <Col style={{ width: "100%", fontSize: "12px" }}>
-              This class did not previously have an established GroupMe
+          <Row style={{ marginTop: "12px" }}>
+            <Col
+              md={1}
+              sm={1}
+              xs={1}
+              style={{ alignItems: "center", justifyContent: "center" }}
+            >
+              Verify you are a student
+            </Col>
+            <Col md={11} sm={11} xs={11} style={{ marginTop: "10px" }}>
+              <DInput
+                style={{ boxShadow: "none", width: "100%" }}
+                placeholder="UMich Email"
+                value={email}
+                onChange={(e) => setEmail(e.target.value)}
+              />
             </Col>
           </Row>
           <br />
+          {noGroupMe ? (
+            <>
+              <Row>
+                <Col style={{ width: "100%", fontSize: "12px" }}>
+                  This class did not previously have an established GroupMe
+                </Col>
+              </Row>
+              <br />
+            </>
+          ) : null}
+
+          <Row>
+            <ReCAPTCHA
+              sitekey="6Le_wDkaAAAAAOkt9YLOXveWvH46haqU854YxA20"
+              onChange={(value) => {
+                if (value == null) {
+                  setVerified(false);
+                } else {
+                  setVerified(true);
+                }
+              }}
+            />
+            <br />
+          </Row>
+
+          <Button
+            verified={verified}
+            onClick={(e) => {
+              e.preventDefault();
+              if (verified) {
+                if (pushEmailToSheets()) {
+                  let data = {
+                    email: email,
+                    className: className,
+                  };
+                  fetch(
+                    "https://4frmru2ivb.execute-api.us-east-1.amazonaws.com/default/sendChatEmailHook",
+                    {
+                      method: "POST",
+                      body: JSON.stringify(data), // body data type must match "Content-Type" header
+                    }
+                  );
+                  ReactGA.event({
+                    category: "Join",
+                    action: "Click",
+                    label: className,
+                  });
+                  setEmailSent(true);
+                } else {
+                  alert("The email you have entered is not verified");
+                }
+              } else {
+                alert("Please prove that you are not a robot");
+              }
+            }}
+          >
+            Join GroupMe
+          </Button>
         </>
-      ) : null}
-
-      <Row>
-        <ReCAPTCHA
-          sitekey="6Le_wDkaAAAAAOkt9YLOXveWvH46haqU854YxA20"
-          onChange={(value) => {
-            if(value == null) {
-              setVerified(false)
-            } else {
-              setVerified(true);
-            }
-          }}
-        />
-        <br />
-      </Row>
-
-      <Button
-        verified={verified}
-        onClick={(e) => {
-          e.preventDefault();
-          if (verified) {
-            if (pushEmailToSheets()) {
-              window.open(classLink, "_blank");
-              ReactGA.event({
-                category: "Join",
-                action: "Click",
-                label: className,
-              });
-              setClicked(false);
-            } else {
-              alert("The email you have entered is not verified");
-            }
-          } else {
-            alert("Please prove that you are not a robot");
-          }
-        }}
-      >
-        Join GroupMe
-      </Button>
+      )}
     </ModalDiv>
   );
 };
