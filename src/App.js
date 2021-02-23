@@ -5,7 +5,7 @@ import SelectBar from "./components/SelectBar";
 import Helm from "./components/Helm";
 import ReactGA from "react-ga";
 import { Heading, Header, Logo } from "./components/styles";
-import { Link, useHistory } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 ReactGA.initialize("UA-176116817-5");
 ReactGA.pageview(window.location.pathname + window.location.search);
@@ -73,30 +73,8 @@ const BulletText = styled.div`
   }
 `;
 
-const Button2 = styled.a`
-  :hover {
-    color: #fcfcfc;
-    background-color: ${BLUE};
-  }
-  padding: 16px;
-  margin: 24px auto;
-  margin-top: 12px;
-  border: 3px solid ${BLUE};
-  transition: 300ms all;
-  display: inline-flex;
-  justify-content: center;
-  align-items: center;
-`;
-
-const LabelMini = styled.div`
-  font-size: 12px;
-  display: inline-flex;
-  margin: 4px auto;
-  margin-top: 12px;
-`;
 
 function App() {
-  let history = useHistory();
 
   return (
     <div className="App">
