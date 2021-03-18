@@ -2823,10 +2823,6 @@ const options = [
     link: "https://app.groupme.com/join_group/65211006/1c5I5BR5",
   },
   {
-    name: "MATH 214",
-    link: "https://app.groupme.com/join_group/65211009/xvfZyPSv",
-  },
-  {
     name: "MATH 215",
     link: "https://app.groupme.com/join_group/65211030/HCZ3LBX8",
   },
