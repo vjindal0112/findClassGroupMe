@@ -31,7 +31,6 @@ const SelectBar = () => {
                     noGroupMe={obj.NoGroupMe}
                     key={index}
                     className={obj.name}
-                    classLink={obj.link}
                   />
                 ) : null}
               </div>

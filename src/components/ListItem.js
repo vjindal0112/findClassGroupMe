@@ -34,7 +34,7 @@ const Overlay = styled.div`
   background-color: rgba(0, 0, 0, 0.2);
 `;
 
-export default function ListItem({ className, classLink, noGroupMe }) {
+export default function ListItem({ className, noGroupMe }) {
   const [clicked, setClicked] = useState(false);
 
   return (
@@ -44,7 +44,6 @@ export default function ListItem({ className, classLink, noGroupMe }) {
           <Overlay>
             <Modal
               className={className}
-              classLink={classLink}
               setClicked={setClicked}
               noGroupMe={noGroupMe}
             />

@@ -73,6 +73,23 @@ const BulletText = styled.div`
   }
 `;
 
+const Subheading = styled(BulletText)`
+  font-size: 18px;
+  margin: auto;
+  text-align: center;
+  text-transform: uppercase;
+  margin-left: 12px;
+  margin-right: 12px;
+  a{
+    text-decoration: none;
+    text-align: left;
+    display: inline;
+  }
+  p{
+    margin-top: 2px;
+  }
+`
+
 
 function App() {
 
@@ -108,6 +125,16 @@ function App() {
       <Heading>
         Find your <span style={{ color: GMBLUE }}>GroupMe</span>
       </Heading>
+      <br />
+      <Subheading>
+      The group  chats listed below were for Winter 2020.
+      </Subheading>
+      <br />
+      <Subheading>
+      <p>
+        GroupMe now lists all class groupchats--checkout <a href="https://support.microsoft.com/en-us/office/what-is-campus-connect-in-groupme-c3a841f1-bd40-43b1-b3da-c3df32a65a8b">Campus Connect</a> 
+      </p>
+      </Subheading>
       <OuterFlex>
         <Flex>
           <BulletPoints bgColor={BLUE}>1</BulletPoints>

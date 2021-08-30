@@ -79,7 +79,7 @@ const DInput = styled.input`
   }
 `;
 
-const Modal = ({ noGroupMe, className, classLink, setClicked }) => {
+const Modal = ({ noGroupMe, className, setClicked }) => {
   const [email, setEmail] = useState("");
   const [verified, setVerified] = useState(false);
   const [emailSent, setEmailSent] = useState(false);
