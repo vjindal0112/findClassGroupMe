@@ -132,7 +132,7 @@ function App() {
       <br />
       <Subheading>
       <p>
-        GroupMe now lists all class groupchats--checkout <a href="https://support.microsoft.com/en-us/office/what-is-campus-connect-in-groupme-c3a841f1-bd40-43b1-b3da-c3df32a65a8b">Campus Connect</a> 
+        GroupMe now lists all class groupchats — checkout <a href="https://support.microsoft.com/en-us/office/what-is-campus-connect-in-groupme-c3a841f1-bd40-43b1-b3da-c3df32a65a8b">Campus Connect</a> 
       </p>
       </Subheading>
       <OuterFlex>
